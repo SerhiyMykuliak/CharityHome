@@ -1,0 +1,38 @@
+
+
+<%= render 'layouts/hero_section', title: "VOLUNTEER PROFILE" %>
+
+<div class="volunteer-profile">
+  <div class="volunteer-profile__content">
+
+    <div class="volunteer-profile__picture"><%=image_tag @volunteer.profile_picture%></div>
+
+    <div class="volunteer-profile__information">
+      <div class="volunteer-profile__name"><%= @volunteer.name%></div>
+      <div class="volunteer-profile__job"><%= @volunteer.job%></div>
+
+      <div class="volunteer-profile__time-together"><%=@volunteer.created_at.strftime("We have been together since %m/%d/%Y") %></div>
+      <div class="volunteer-profile__description"><%=@volunteer.description%></div>  
+    
+      <div class="contacts volunteer-profile__contacts">
+          <%= link_to @volunteer.facebook_url do %>
+            <i class="fa fa-facebook"></i>
+          <% end %>
+          <%= link_to @volunteer.twitter_url do %>
+            <i class="fa fa-twitter"></i>
+          <% end %>
+          <%= link_to @volunteer.linkedin_url do %>
+            <i class="fa fa-linkedin"></i>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+

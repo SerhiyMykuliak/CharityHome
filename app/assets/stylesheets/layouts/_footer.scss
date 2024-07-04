@@ -1,0 +1,57 @@
+.footer{
+
+  background-color: #262F36;
+  
+  &__container{
+    width: 1180px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    gap: 20px;
+    padding: 90px 0;
+    gap: 30px;
+
+    h3{
+      font-size: 20px;
+      color: #fff;
+      margin-bottom: 60px;
+    }
+
+    ul{
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      li{
+        margin-bottom: 18px;
+      }
+    }
+
+  }
+
+  &__about{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  &__contacts{
+
+    .fa{
+      margin-right: 20px;
+    }
+  }
+  
+  .contacts{
+    a{
+      color: black;
+      width: 30px;
+      height: 30px; 
+      line-height: 30px; 
+      background-color: #fff; 
+    }
+  }
+
+  &__pages{
+    display: flex;
+    flex-direction: column;
+  }
+}
