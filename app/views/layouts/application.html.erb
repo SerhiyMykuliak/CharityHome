@@ -21,11 +21,19 @@
           <ul>
             <li><%= link_to "HOME", root_path%></li>
             <li>ABOUT</li>
-            <li>CAUSES</li>
+            <li><%= link_to "CAUSES", causes_path%></li>
             <li>EVENTS</li>
             <li><%= link_to "VOLUNTEER", volunteers_path%></li>
             <li>GALLERY</li>
             <li>CONTACT</li>
+            <li>
+              <%if current_admin.present?%>
+                  <%= current_admin.email%>
+                  <%= button_to "Вийти", session_path, method: :delete%>
+                <%else%>
+                  <%= link_to "Вхід", new_session_path%>
+              <%end%>
+            </li>
           </ul>
         </div>
         <div class="search"><%= fa_icon 'search', class: 'search-icon' %></div>

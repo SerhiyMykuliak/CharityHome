@@ -1,4 +1,6 @@
 class VolunteersController < ApplicationController
+  before_action :authenticate_admin, only: [:new]
+
   def index
     @volunteers = Volunteer.all
   end

@@ -1,0 +1,21 @@
+
+
+
+<div class="container">
+  <h2>Ведіть емайл і пароль для входу на сайт як адмін</h2>
+
+  <%= flash[:alert] %>
+  <%= flash[:notice] %>
+
+  <%= form_with scope: :session, url: session_path, data: {turbo: false} do |f|%>
+    <p><%=f.label "Введіть емайл"%></p>
+    <p><%=f.text_field :email %></p>
+
+    <p><%=f.label "Введіть пароль"%></p>
+    <p><%=f.password_field :password %></p>
+
+    <p><%=f.submit "Ввійти"%></p>
+  <%end%>
+</div>
+
+

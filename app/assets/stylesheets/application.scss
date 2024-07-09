@@ -11,18 +11,6 @@
   margin: 0;
 }
 
-h1{
-  font-size: 40px;
-  font-weight: 700;
-}
-
-p{
-  font-size: 13px;
-  color: #C9C9C9;
-  line-height: 27px;
-  
-}
-
 .contacts{
   display: flex;
   gap: 20px;
@@ -40,17 +28,6 @@ p{
 
   }
 
-}
-
-a{
-  color: #C9C9C9;
-  font-size: 14px;
-  text-decoration: none;
-  transform: color 0.5s;
-
-  &:hover{
-    color: #eb5310;
-  }
 }
 
 li{
