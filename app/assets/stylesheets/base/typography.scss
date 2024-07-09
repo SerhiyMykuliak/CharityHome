@@ -4,8 +4,29 @@
   font-size: 14px;
 }
 
+h1{
+  font-size: 40px;
+  font-weight: 700;
+}
+
 h3{
   margin-top: 10px;
 }
 
+p{
+  font-size: 14px;
+  color: #C9C9C9;
+  line-height: 27px;
+  margin-bottom: 16px;
+}
 
+a{
+  color: #C9C9C9;
+  font-size: 14px;
+  text-decoration: none;
+  transform: color 0.5s;
+
+  &:hover{
+    color: #eb5310;
+  }
+}
