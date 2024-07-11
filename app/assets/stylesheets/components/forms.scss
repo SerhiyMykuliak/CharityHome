@@ -1,0 +1,73 @@
+
+.form{
+
+  form{
+    display: flex;
+    flex-direction: column;
+  
+    label{
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+  
+    input[type="text"],
+    input[type="number"]{
+      width: 400px;
+      height: 40px;
+      border: 1px solid #9C9C9C;
+      border-radius: 0;
+      padding-left: 20px ;
+      color: #9C9C9C;
+      margin-bottom: 20px;
+  
+      &:focus{
+        outline: none;
+        border: 2px solid #f14b05;
+        border-radius: 5px;
+      }
+    }
+  
+    input[type="file"]{
+      margin: 10px 0;
+    }
+  
+    textarea{
+      width: 600px;
+      height: 200px;
+      border: 1px solid #9C9C9C;
+      border-radius: 0;
+      padding: 20px ;
+      color: #9C9C9C;
+      resize: none;
+      margin-bottom: 20px;
+    }
+  }
+
+
+}
+
+.edit-form{
+  display: flex;
+  .form{
+    flex: 2;
+    margin-left: 20px;
+  }
+  .picture{
+    flex: 1;
+    
+  }
+}
+
+.image{
+  width: 100%;
+}
+
+.error-form-message{
+  color: #f14b05;
+}
+
+
+
+
+

@@ -1,5 +1,5 @@
 class VolunteersController < ApplicationController
-  before_action :authenticate_admin, only: [:new]
+ 
 
   def index
     @volunteers = Volunteer.all
@@ -22,8 +22,23 @@ class VolunteersController < ApplicationController
   def show
     @volunteer = Volunteer.find(params[:id])
   end
+
+  def edit
+    @volunteer = Volunteer.find(params[:id])
+  end
   
+  def update
+    @volunteer = Volunteer.find(params[:id])
+
+    if @volunteer.update(volunteer_params)
+      redirect_to volunteer_path
+    else  
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   
+
   private
 
   def volunteer_params

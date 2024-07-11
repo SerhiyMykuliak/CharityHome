@@ -14,10 +14,31 @@ class CausesController < ApplicationController
     if @cause.save
       redirect_to causes_path
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
     
   end
+
+  def show
+    @cause = Cause.find(params[:id])    
+  end
+
+  def edit
+    @cause = Cause.find(params[:id])
+  end
+  
+  def update
+    @cause = Cause.find(params[:id])
+
+    if @cause.update(cause_params)
+      redirect_to cause_path
+    else
+      render :new, status: :unprocessable_entity
+    end
+    
+  end
+  
+
   private
 
   def cause_params

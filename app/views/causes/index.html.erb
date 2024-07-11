@@ -22,9 +22,9 @@
       <div class="cause__details">
         <h3><%=cause.title%></h3>
         <p class="cause__donates"><%= "$#{cause.donated_amount} donated of $#{cause.goal_amount}" %></p>
-        <p class="cause__description"><%=cause.description.truncate(300)%></p>
+        <p class="mb"><%=cause.description.truncate(300)%></p>
       
-        <%= button_to "DONATE NOW", cause_path(cause), method: :get, class: "button_primary" %>
+        <%= button_to "DONATE NOW", cause_path(cause), method: :get, class: "button_secondary" %>
       </div>
     </div>
   <% end %>

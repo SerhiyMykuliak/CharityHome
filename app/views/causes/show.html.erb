@@ -1,0 +1,35 @@
+
+<%= render 'layouts/hero_section', title: @cause.title %>
+
+<div class="container cause-container">
+  
+  <div class="cause">
+    <%=image_tag @cause.cause_picture, class:"image"%>
+
+    <div class="cause__details">
+      <div class="date-box">
+        <div class="date">
+          <div><%=@cause.created_at.strftime('%d')%></div>
+          <div><%=@cause.created_at.strftime('%b')%></div>
+        </div>
+      </div>
+      <div class="cause__content">
+        <div class="campaign-summary">
+          <div class="campaign-summary__item">
+            <span><%=progress_percentage(@cause.donated_amount, @cause.goal_amount)%>%</span>
+            <p>Raised</p>  
+          </div>
+          <div class="campaign-summary__item">
+            <span>$<%=@cause.donated_amount%></span>
+            <p>donated of $<%=@cause.goal_amount%> goal</p>
+          </div>
+        </div>
+
+        <p class="font-16 mg"><%=@cause.description%></p>
+      </div>
+    </div>
+  </div>
+  <div class="side-bar-wiget"></div>  
+</div>
+
+

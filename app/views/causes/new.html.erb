@@ -1,26 +1,11 @@
 
+<%= render 'layouts/hero_section', title: "CREATE CAUSE" %>
 
-<%= form_with model: @cause do |f| %>
+<div class="container">
 
-  <%=f.label "Заголовок збору"%>
-  <%=f.text_field :title%> <br>
+  <%= render 'form' %>
 
-  <%=f.label "Опис збору"%>
-  <%=f.text_area :description%> <br>
-
-  <%=f.label "Ціль збору в доларах"%>
-  <%=f.number_field :goal_amount%> <br>
-
-  <%=f.label "Зображення для збору"%>
-  <%=f.file_field :cause_picture%> <br>
-
-  <%=f.button :submit%>
-
-<%end%>
-
-
-
-
+</div>
 
 
 

@@ -1,26 +1,7 @@
-<%= form_with model: @volunteer do |f| %>
+<%= render 'layouts/hero_section', title: "CREATE VOLUNTEER" %>
 
-  <%=f.label "Імя волонтера"%>
-  <%=f.text_field :name%> <br>
-
-  <%=f.label "Робота"%>
-  <%=f.text_field :job%> <br>
-
-  <%=f.label "Опис"%>
-  <%=f.text_area :description%> <br>
-
-  <%=f.label "Посилання на Facebook"%>
-  <%=f.text_field :facebook_url%> <br>
-
-  <%=f.label "Посилання на Twitter"%>
-  <%=f.text_field :twitter_url%> <br>
-
-  <%=f.label "Посилання на LinkedIn"%>
-  <%=f.text_field :linkedin_url%> <br>
-
-  <%=f.label "Зображення профілю"%>
-  <%=f.file_field :profile_picture%> <br>
-
-  <%=f.button :submit%>
-
-<%end%>
+<div class="container">
+  <div class="edit-form">
+    <%= render 'form' %>
+  </div>
+</div>
