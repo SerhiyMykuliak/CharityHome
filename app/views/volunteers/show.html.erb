@@ -12,9 +12,9 @@
       <div class="volunteer-profile__job"><%= @volunteer.job%></div>
 
       <div class="volunteer-profile__time-together"><%=@volunteer.created_at.strftime("We have been together since %m/%d/%Y") %></div>
-      <div class="volunteer-profile__description"><%=@volunteer.description%></div>  
+      <div class="volunteer-profile__description mb"><%=@volunteer.description%></div>  
     
-      <div class="contacts volunteer-profile__contacts">
+        <div class="contacts volunteer-profile__contacts">
           <%= link_to @volunteer.facebook_url do %>
             <i class="fa fa-facebook"></i>
           <% end %>
@@ -24,7 +24,9 @@
           <%= link_to @volunteer.linkedin_url do %>
             <i class="fa fa-linkedin"></i>
           <% end %>
-      </div>
+       </div>
+
+      <div><%=@volunteer.content%></div>
     </div>
   </div>
 </div>

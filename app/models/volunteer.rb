@@ -1,6 +1,6 @@
 class Volunteer < ApplicationRecord
   has_one_attached :profile_picture
-
+  has_rich_text :content
   
   validates :name, presence: true, length: {minimum:2, maximum:20}
   validates :job, presence: true

@@ -14,6 +14,8 @@
         </div>
       </div>
       <div class="cause__content">
+
+      <p class="mg"><%=@cause.description%></p>
         <div class="campaign-summary">
           <div class="campaign-summary__item">
             <span><%=progress_percentage(@cause.donated_amount, @cause.goal_amount)%>%</span>
@@ -25,7 +27,7 @@
           </div>
         </div>
 
-        <p class="font-16 mg"><%=@cause.description%></p>
+        <p class="font-16 mg"><%=@cause.content%></p>
       </div>
     </div>
   </div>
