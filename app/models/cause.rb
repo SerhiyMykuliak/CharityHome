@@ -1,5 +1,6 @@
 class Cause < ApplicationRecord
   has_one_attached :cause_picture
+  has_rich_text :content
 
   validates :title, presence: true, length: {minimum:4, maximum:60}
   validates :description, presence: true, length: {minimum:20}

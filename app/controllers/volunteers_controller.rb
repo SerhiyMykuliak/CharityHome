@@ -42,7 +42,7 @@ class VolunteersController < ApplicationController
   private
 
   def volunteer_params
-    params.require(:volunteer).permit(:name, :job, :description, :facebook_url, :twitter_url, :linkedin_url, :profile_picture)
+    params.require(:volunteer).permit(:name, :job, :description, :facebook_url, :twitter_url, :linkedin_url, :profile_picture, :content)
   end
 
 end

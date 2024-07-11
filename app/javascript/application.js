@@ -3,3 +3,6 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "volunteer_hover"
 import { Turbo } from "@hotwired/turbo-rails"
+
+import "trix"
+import "@rails/actiontext"
