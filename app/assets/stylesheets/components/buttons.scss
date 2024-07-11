@@ -8,11 +8,34 @@
   margin-top: 10px;
   cursor: pointer;
   transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+  display: block !important;
 
   &:hover{
     color: #fff;
     background-color: #f14b05;
     border-color: #f14b05;
+
+  }
+}
+
+.button_secondary{
+  padding: 9px 24px;
+  background-color: #f14b05;
+  border: 2px solid #f14b05 ;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+  color: white;
+  display: block !important;
+
+
+  &:hover{
+    color: black;
+    background-color: #fff;
+    border-color: #E6E6E6;
 
   }
 }

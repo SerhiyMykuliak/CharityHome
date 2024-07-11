@@ -1,0 +1,51 @@
+<div class="form">
+  <%= form_with model: @volunteer, html: { multipart: true } do |f| %>
+
+    <%=f.label "Full name"%>
+    <%if @volunteer.errors[:name].any?%>
+      <div class="error-form-message"><%=@volunteer.errors[:name].first%></div>
+    <%end%>
+    <%=f.text_field :name%> 
+
+    <%=f.label "Job"%>
+    <%if @volunteer.errors[:job].any?%>
+      <div class="error-form-message"><%=@volunteer.errors[:job].first%></div>
+    <%end%>
+    <%=f.text_field :job%> 
+
+    <%=f.label "Description"%>
+    <%if @volunteer.errors[:description].any?%>
+      <div class="error-form-message"><%=@volunteer.errors[:description].first%></div>
+    <%end%>
+    <%=f.text_area :description%> 
+
+    <%=f.label "Facebook link"%>
+    <%if @volunteer.errors[:facebook_url].any?%>
+      <div class="error-form-message"><%=@volunteer.errors[:facebook_url].first%></div>
+    <%end%>
+    <%=f.text_field :facebook_url%> 
+
+    <%=f.label "Twitter link"%>
+    <%if @volunteer.errors[:twitter_url].any?%>
+      <div class="error-form-message"><%=@volunteer.errors[:twitter_url].first%></div>
+    <%end%>
+    <%=f.text_field :twitter_url%> 
+
+    <%=f.label "LinkedIn link"%>
+    <%if @volunteer.errors[:linkedin_url].any?%>
+      <div class="error-form-message"><%=@volunteer.errors[:linkedin_url].first%></div>
+    <%end%>
+    <%=f.text_field :linkedin_url%>
+
+    <%= f.label :profile_picture, "Profile picture" %>
+    <%if @volunteer.errors[:profile_picture].any?%>
+      <div class="error-form-message"><%=@volunteer.errors[:profile_picture].first%></div>
+    <%end%>
+    <%= f.file_field :profile_picture %>
+
+    <%= button_tag 'Save', type: 'submit', class: 'button_secondary' %>
+    <%= button_tag 'Reset', type: 'reset', class: 'button_primary'%>
+
+  <%end%>
+</div>
+

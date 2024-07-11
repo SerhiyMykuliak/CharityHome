@@ -1,0 +1,40 @@
+
+<div class="form">
+
+  <%= form_with model: @cause, html: { multipart: true } do |f| %>
+    <%=f.label "Title"%>
+    <%if @cause.errors[:title].any?%>
+      <div class="error-form-message"><%=@cause.errors[:title].first%></div>
+    <%end%>
+    <%=f.text_field :title%> 
+
+    <%=f.label "Description"%>
+    <%if @cause.errors[:description].any?%>
+      <div class="error-form-message"><%=@cause.errors[:description].first%></div>
+    <%end%>
+    <%=f.text_area :description%> 
+
+    <%=f.label "Goal amoun"%>
+    <%if @cause.errors[:goal_amount].any?%>
+      <div class="error-form-message"><%=@cause.errors[:goal_amount].first%></div>
+    <%end%>
+    <%=f.number_field :goal_amount%> 
+
+    <%=f.label "Cause picture"%>
+    <%if @cause.errors[:cause_picture].any?%>
+      <div class="error-form-message"><%=@cause.errors[:cause_picture].first%></div>
+    <%end%>
+    <%=f.file_field :cause_picture%> 
+
+    <%= button_tag "Save", type:"submit", class:"button_secondary"%>
+    <%= button_tag "Reset", type:"reset", class:"button_primary"%>
+  <%end%>
+
+</div>
+
+
+
+
+
+
+
