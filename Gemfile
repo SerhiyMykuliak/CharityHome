@@ -69,7 +69,6 @@ group :test do
 end
 
 gem 'sass-rails'
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.8'
 gem 'font-awesome-sass'
 gem 'active_storage_validations', '~> 1.1', '>= 1.1.4'
 gem 'hotwire-rails'

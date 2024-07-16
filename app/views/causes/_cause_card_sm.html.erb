@@ -1,0 +1,23 @@
+<div class="cause-sm">
+  
+  <div class="cause-sm__picture_wrap">
+    <%=image_tag cause.cause_picture, class:"cause-sm__image image"%>
+    
+    <div class="circle-progress-bar">
+      <svg width="88" height="88" viewBox="-11 -11 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg" style="transform:rotate(-90deg)">
+        <circle r="34" cx="44" cy="44" fill="transparent" stroke="#e0e0e0" stroke-width="6" stroke-dasharray="213.52px" stroke-dashoffset="0"></circle>
+        <circle r="34" cx="44" cy="44" fill="#eb5310" stroke="#f58250" stroke-width="6" stroke-linecap="butt" stroke-dashoffset="<%=circle_progress_percentage(cause.donated_amount, cause.goal_amount, 34)%>" fill="transparent" stroke-dasharray="213.52px"></circle>
+        <text x="20px" y="59px" fill="white" style="font-size: 17px; font-weight: 500; transform: rotate(90deg) translate(0px, -96px)"><%=progress_percentage(cause.donated_amount, cause.goal_amount)%>%</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="cause-sm__details">
+    <h3>SPONSOR A CHILD TODAY</h3>
+    <p class="cause-sm__donates"><%= "$#{cause.donated_amount} donated of $#{cause.goal_amount}" %></p>
+    <p class=""><%=cause.description.truncate(150)%></p>
+    
+    <%= button_to "DONATE NOW", cause_path(cause), method: :get, class: "button_secondary" %>
+  </div>
+
+</div>

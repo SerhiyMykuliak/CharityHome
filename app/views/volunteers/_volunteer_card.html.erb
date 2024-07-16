@@ -1,0 +1,23 @@
+<div class="volunteer">
+
+      <div class="profile_image_wrap">
+        <div class="contacts volunteer__contacts">
+          <%= link_to volunteer.facebook_url do %>
+            <i class="fa-brands fa-facebook-f"></i>
+          <% end %>
+          <%= link_to volunteer.twitter_url do %>
+            <i class="fa-brands fa-twitter"></i>
+          <% end %>
+          <%= link_to volunteer.linkedin_url do %>
+            <i class="fa-brands fa-linkedin-in"></i>
+          <% end %>
+        </div>
+        <%=image_tag volunteer.profile_picture, class: "profile_image"%>
+      </div>
+      <h3 class="volunteer__fullname"><%=volunteer.name%></h3>
+      <p class="volunteer__job"><%=volunteer.job%></p>
+
+      <p class="volunteer__description"><%=truncate(volunteer.description, length: 100, separator: " ")%></p>
+  
+      <%=button_to "VIEW PROFILE", volunteer_path(volunteer), method: :get, class: "button_primary" %>
+</div>

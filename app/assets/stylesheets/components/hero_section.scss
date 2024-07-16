@@ -33,39 +33,5 @@
       position: relative;
     }
     
-    .decor_line{
-      width: 15px;
-      height: 15px;
-      border: 3px solid #eb5310;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      margin-top: 20px;
-
-      &::before{
-        content: " ";
-        width: 70px;
-        border-bottom: 2px solid #c9c9c9;
-        position: absolute;
-        right: calc(50% + 11px);
-      }
-
-      &::after{
-        content: " ";
-        width: 70px;
-        border-bottom: 2px solid #c9c9c9;
-        position: absolute;
-        left: calc(50% + 10px);
-      }
-    }
-      
-    .decor_point{
-      width: 7px;
-      height: 7px;
-      border-radius: 100%;
-      background-color: #eb5310;
-    }
   }
 }

@@ -9,8 +9,17 @@ h1{
   font-weight: 700;
 }
 
+h2{
+  color: #202a30;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 10px 0 30px;
+}
+
 h3{
   margin-top: 10px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 p{
@@ -40,8 +49,26 @@ span{
   font-size: 16px;
 }
 
+.sec-title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 63px;
+
+  h2{
+    font-size: 35px;
+    text-transform: capitalize;
+    color: #202A30;
+    font-weight: bold;
+  }
+}
+
 .mb{
   margin-bottom: 16px;
+}
+
+.center{
+  margin: 0 auto;
 }
 
 

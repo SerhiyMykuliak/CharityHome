@@ -1,2 +1,208 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+
+<div class="container">
+  <div class="appear-text">
+    <%"to feed and educate".split("").each do |symbol|%>
+      <div class="letter"><%=symbol%></div>
+    <%end%>
+  </div>
+
+
+  <div class="container2">
+    <div class="text">we need your support</div>
+  </div>
+  
+  <div class="appear">
+    Became the part to change the world
+  </div>
+
+  <div class="subtitle">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb
+  </div>
+</div>
+
+<div class="call-to-action">
+  <div class="action" style="background-image: url('<%= asset_path('left-box-bg.jpg') %>');">
+    <div class="action__icon"><i class="fa fa-coins icon"></i></div>
+    <div class="action__content">
+      <h3>DONATION</h3>
+      <p class="font-16 mb">There are many variations of lorem passagei of Lorem Ipsum availabl</p>
+      <%= button_to "DONATE NOW", causes_path, class:"button_primary", method: "get" %>
+    </div>
+  </div>
+  <div class="action" style="background-image: url('<%= asset_path('center-box-bg.jpg') %>'); ::after{background-color: rgba(255, 115, 55, 0.8)}">
+    <div class="action__icon"></div>
+    <div class="action__content">
+      <h3>VOLUNTEER</h3>
+      <p class="font-16 mb">Vivamus sed pretium elit, quis luctusurna Curabitur id tempus massa</p>
+      <%= button_to "JOIN NOW", volunteers_path, class:"button_primary", method: "get" %>
+    </div>
+  </div>
+  <div class="action" style="background-image: url('<%= asset_path('right-box-bg.jpg') %>');">
+    <div class="action__icon"><i class="fa-solid fa-hand-holding-heart icon"></i></div>
+    <div class="action__content">
+      <h3>FUNDRAISE</h3>
+      <p class="font-16 mb">Curabitur elementum euismod mi Vivamus massa augue vio</p>
+      <%= button_to "READER MORE", causes_path, class:"button_primary", method: "get" %>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="event-causes">
+    <div class="events"></div>
+    <div class="featured-cause">
+      <h2>
+        FEATURED CAUSES
+        <div class="decoration-double-line"></div>
+      </h2>
+      
+      <%= render 'causes/cause_card_lg', cause: @feature_cause %>
+    </div>
+  </div>
+</div>
+
+<div class="bg" style="background-color:#f6f4f2; display: flex;">
+  <div class="container">
+    <div class="recent-causes">
+      <div class="sec-title">
+          <h2 class="mb">Recent Causes</h2>
+          <p class="font-16 mb">Lorem ipsum is a dummy text it will use for subtitle here</p>
+          <div class="decoration-circle decoration-circle-gray">
+            <div class="decoration-point"></div>
+          </div>
+      </div>
+
+      <div class="recent-causes__cards">
+        <%@recent_causes.each do |cause|%>
+          <%= render 'causes/cause_card_sm', cause: cause%>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="promote-project" style="background-image: url(<%=asset_path('bg-widget-01')%>);">
+  <div class="container">
+      <h3>Save Children From Hunger</h3>
+      <div class="decoration-circle decoration-circle-colored center">
+        <div class="decoration-point"></div>
+      </div>
+      <h2>BECAME A PART OF THE WORLD LOREM IPSUM</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam quaerat atque, dolore. Amido ipsum dolor sit amet, consectetur adipisicing elit. Numquam quaerat atque, dolore.Lorem ipsum dolor sit amet, consectetur.</p>
+      <%= button_to "DONATE NOW", causes_path, method: :get, class: "button_secondary center" %>
+  </div>
+</div>
+    
+<div class="galery">
+  <div class="container">
+    <div class="sec-title">
+        <h2 class="mb">Our Gallery</h2>
+        <p class="font-16 mb">Lorem ipsum is a dummy text it will use for subtitle here</p>
+        <div class="decoration-circle decoration-circle-gray">
+          <div class="decoration-point"></div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="our-missions">
+  <div class="container">
+    <div class="sec-title">
+      <h2 class="mb">Our Mission</h2>
+      <p class="font-16 mb">Lorem ipsum is a dummy text it will use for subtitle here</p>
+      <div class="decoration-circle decoration-circle-gray">
+        <div class="decoration-point"></div>
+      </div>
+    </div>
+    <div class="missions">
+      <div class="mission">
+        <div class="mission__icon"><i class="fa-solid fa-book-open-reader"></i></div>
+        <div class="mission__content">
+          <h3>Charity For Education</h3>
+          <p>There are many variations of lorem passagei of Lorem Ipsum available but the majority have</p>
+        </div>
+      </div>
+      <div class="mission">
+        <div class="mission__icon"><i class="fa-solid fa-utensils"></i></div>
+        <div class="mission__content">
+          <h3>Feed For Hungry Child</h3>
+          <p>There are many variations of lorem passagei of Lorem Ipsum available but the majority have</p>
+        </div>
+      </div>
+      <div class="mission">
+        <div class="mission__icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+        <div class="mission__content">
+          <h3>Home For Homeless</h3>
+          <p>There are many variations of lorem passagei of Lorem Ipsum available but the majority have</p>
+        </div>
+      </div>
+      <div class="mission">
+        <div class="mission__icon"><i class="fa-solid fa-bottle-water"></i></div>
+        <div class="mission__content">
+          <h3>Bringing Clean Water</h3>
+          <p>There are many variations of lorem passagei of Lorem Ipsum available but the majority have</p>
+        </div>
+      </div>
+      <div class="mission">
+        <div class="mission__icon"><i class="fa-regular fa-money-bill-1"></i></div>
+        <div class="mission__content">
+          <h3>Help Little Hands</h3>
+          <p>There are many variations of lorem passagei of Lorem Ipsum available but the majority have</p>
+        </div>
+      </div>
+      <div class="mission">
+        <div class="mission__icon"><i class="fa-solid fa-people-roof"></i></div>
+        <div class="mission__content">
+          <h3>Donate For Children</h3>
+          <p>There are many variations of lorem passagei of Lorem Ipsum available but the majority have</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="fact-counter">
+  <div class="container">
+    <div class="fact-counter__content">
+      <div class="fact-counter__title">
+        <h2>We are served since 35 years to helpless people with trust andwe are happy</h2>
+        <%= button_to "BE A PART OF US", volunteers_path, method: "get", class:"button_primary"%>
+      </div>
+
+      <div class="fact-counter__facts">
+        <div class="fact">
+          <div class="fact__icon"><i class="fa-solid fa-trophy"></i></div>
+          <div class="fact__timer">365</div>
+          <p>TOTAL AWARDS</p>
+        </div>
+          <div class="fact">
+          <div class="fact__icon"><i class="fa-solid fa-user-group icon"></i></div>
+          <div class="fact__timer">2200</div>
+          <p>TOTAL AWARDS</p>
+        </div>
+        <div class="fact">
+          <div class="fact__icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <div class="fact__timer">155</div>
+          <p>TOTAL PROJECTS</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="meet-volunteer">
+  <div class="container">
+    <div class="meet-volunteer__content">
+      <%@volunteers.each do |volunteer|%>
+        <%= render 'volunteers/volunteer_card', volunteer: volunteer %>
+      <%end%>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
