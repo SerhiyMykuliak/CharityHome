@@ -20,7 +20,7 @@
   </div>
 </div>
 
-<div class="call-to-action">
+<section class="call-to-action">
   <div class="action" style="background-image: url('<%= asset_path('left-box-bg.jpg') %>');">
     <div class="action__icon"><i class="fa fa-coins icon"></i></div>
     <div class="action__content">
@@ -45,7 +45,7 @@
       <%= button_to "READER MORE", causes_path, class:"button_primary", method: "get" %>
     </div>
   </div>
-</div>
+</section>
 
 <div class="container">
   <div class="event-causes">
@@ -190,19 +190,87 @@
   </div>
 </div>
 
-<div class="meet-volunteer">
-  <div class="container">
-    <div class="meet-volunteer__content">
-      <%@volunteers.each do |volunteer|%>
-        <%= render 'volunteers/volunteer_card', volunteer: volunteer %>
-      <%end%>
+<div class="meet-volunteer container">
+  <div class="sec-title sec-title-left">
+      <h2 class="mb">Meet Our Volunteers</h2>
+      <p class="font-16 mb">Lorem ipsum is a dummy text it will use for subtitle here</p>
+      <div class="decoration-circle decoration-circle-gray">
+        <div class="decoration-point"></div>
+      </div>
+  </div>
+
+  <div class="meet-volunteer-swiper">
+    <div class="swiper-buttons">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <%@volunteers.each do |volunteer|%>
+          <div class="swiper-slide"><%= render 'volunteers/volunteer_card', volunteer: volunteer %></div>
+        <%end%>
+      </div>
     </div>
   </div>
 </div>
 
 
+<div class="testimonials-section">
+  <div class="testimonials-content container">
+    <div class="sec-title">
+      <h2>Testimonials</h2>
+      <div class="decoration-circle decoration-circle-colored">
+        <div class="decoration-point"></div>
+      </div>
+    </div>
 
-
-
-
-
+    <div class="swiper-testimonials-container">
+      
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testimonial">
+            <p class="testimonial__body">Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
+            <h3 class="testimonial__author">Paul Merry</h3>
+            <span class="testimonial__subtitle">Patient of Asthama</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial">
+            <p class="testimonial__body">Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
+            <h3 class="testimonial__author">Jane Doe</h3>
+            <span class="testimonial__subtitle">Patient of Flu</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial">
+            <p class="testimonial__body">Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
+            <h3 class="testimonial__author">Jane Doe</h3>
+            <span class="testimonial__subtitle">Patient of Flu</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial">
+            <p class="testimonial__body">Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
+            <h3 class="testimonial__author">Jane Doe</h3>
+            <span class="testimonial__subtitle">Patient of Flu</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial">
+            <p class="testimonial__body">Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
+            <h3 class="testimonial__author">Jane Doe</h3>
+            <span class="testimonial__subtitle">Patient of Flu</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial">
+            <p class="testimonial__body">Lorem ipsum dolor sit amet, per justo iracundia an. Inani tation tritani mea ut. Mundi scriptorem</p>
+            <h3 class="testimonial__author">Jane Doe</h3>
+            <span class="testimonial__subtitle">Patient of Flu</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div>
