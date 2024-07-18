@@ -10,7 +10,7 @@
 .volunteer{
   flex: 0 0 calc(25% - 30px);
   
-  .profile_image_wrap{
+  &__profile-image-wrap{
     position: relative;
     display: flex;
     

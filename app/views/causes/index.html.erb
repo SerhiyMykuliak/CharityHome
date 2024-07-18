@@ -2,7 +2,7 @@
 
 <%= render 'layouts/hero_section', title: "CAUSES" %>
 
-<div class="causes-content">
+<div class="causes-container container">
   <% @causes.each do |cause| %>
     <%= render 'cause_card_lg', cause: cause %>
   <% end %>

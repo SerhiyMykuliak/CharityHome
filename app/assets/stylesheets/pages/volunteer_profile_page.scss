@@ -1,6 +1,3 @@
-
-
-
 .volunteer-profile{
 
   &__content{
@@ -43,6 +40,7 @@
     font-size: 14px;
     color: #9C9C9C;
     line-height: 26px;
+    margin-bottom: 15px;
   }
 
   &__time-together{
@@ -58,6 +56,7 @@
   .contacts{
     a{
       background-color: #eb5310;
+      color: white;
     }
   }
 

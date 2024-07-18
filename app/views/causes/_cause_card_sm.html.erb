@@ -15,7 +15,7 @@
   <div class="cause-sm__details">
     <h3>SPONSOR A CHILD TODAY</h3>
     <p class="cause-sm__donates"><%= "$#{cause.donated_amount} donated of $#{cause.goal_amount}" %></p>
-    <p class=""><%=cause.description.truncate(150)%></p>
+    <p ><%=cause.description.truncate(150)%></p>
     
     <%= button_to "DONATE NOW", cause_path(cause), method: :get, class: "button_secondary" %>
   </div>

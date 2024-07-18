@@ -36,3 +36,19 @@
     content: '\f104'; 
   }
 }
+
+.swiper-pagination{
+  position: static;
+
+  &-bullet{
+    border: 2px solid #eb5310;
+    background-color: white;
+    opacity: 1;
+    width: 5px;
+    height: 5px;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: #eb5310;
+  }
+
+}

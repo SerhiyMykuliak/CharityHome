@@ -36,9 +36,24 @@ li{
 
 .container{
   width: 1180px;
-  margin: 90px auto;
+  margin: 0 auto;
 }
 
+.form-container{
+  width: 1180px;
+  margin: 0 auto;
+  padding: 90px 0;
+}
+
+
+.bg-image{
+
+  &--fixed{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 
 
 
