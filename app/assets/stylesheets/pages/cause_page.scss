@@ -2,6 +2,7 @@
 
 .cause-container{
   display: flex;
+  padding: 90px 0;
 
   .cause{
     display: flex;
@@ -13,29 +14,15 @@
       margin-top: 25px;
     }
 
-  }
-
-  .campaign-summary{
-    border: 1px solid #e6e6e6;
-    padding: 14px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-
-    &__item{
-      width: 50%;
-
+    &__date-box{
+      width: 90px;
+      display: flex;
+      flex-direction: column;
+      margin-right: 25px;
+      
     }
-  }
 
-  .date-box{
-    width: 90px;
-    display: flex;
-    flex-direction: column;
-    margin-right: 25px;
-    
-    
-    .date{
+    &__date{
       color: white;
       font-weight: 500;
       text-transform: uppercase;
@@ -47,17 +34,28 @@
       flex-direction: column;
       justify-content: center;
       text-align: center;
-
-      div{
-        font-size: 24px;
-      }
     }
 
-  }
+    &__description{
+      margin-bottom: 15px;
+    }
 
-  .side-bar-wiget{
-    flex: 1;
-  }
+    &__campaign-summary{
+      border: 1px solid #e6e6e6;
+      padding: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
 
+    &__campaign-summary-column{
+      width: 50%;
+    }
+  }
 }
+
+.side-bar-wiget{
+  flex: 1;
+}
+
 

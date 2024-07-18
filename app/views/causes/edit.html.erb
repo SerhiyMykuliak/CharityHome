@@ -1,15 +1,14 @@
 
-<div class="container">
 
+<%= render 'layouts/hero_section', title: "EDIT CAUSE" %>
+
+<div class="form-container">
   <div class="edit-form">
     <div class="picture">
       <%=image_tag @cause.cause_picture, class:"image"%>
     </div>
     <%= render 'form' %>
-
   </div>
-
-
 </div>
 
 

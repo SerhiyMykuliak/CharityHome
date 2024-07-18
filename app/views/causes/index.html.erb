@@ -2,30 +2,8 @@
 
 <%= render 'layouts/hero_section', title: "CAUSES" %>
 
-<div class="causes-content">
+<div class="causes-container container">
   <% @causes.each do |cause| %>
-
-    <%progress = progress_percentage(cause.donated_amount, cause.goal_amount)%>
-
-    <div class="cause">
-      <div class="cause__picture-wrap">
-        <%= image_tag cause.cause_picture, class: "cause__image"%>
-
-        <div class="progress-bar-wrap">
-          <div class="progress-bar">
-            <div class="progress-value" style="width: <%= progress %>%;"></div>
-            <div class="progress-number" style="margin-left: calc(<%= progress %>% - 17px);"><%=progress%>%</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="cause__details">
-        <h3><%=cause.title%></h3>
-        <p class="cause__donates"><%= "$#{cause.donated_amount} donated of $#{cause.goal_amount}" %></p>
-        <p class="mb"><%=cause.description.truncate(300)%></p>
-      
-        <%= button_to "DONATE NOW", cause_path(cause), method: :get, class: "button_secondary" %>
-      </div>
-    </div>
+    <%= render 'cause_card_lg', cause: cause %>
   <% end %>
 </div>

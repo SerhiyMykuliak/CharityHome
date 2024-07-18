@@ -1,6 +1,5 @@
 
 <div class="form">
-
   <%= form_with model: @cause, html: { multipart: true } do |f| %>
     <%=f.label "Title"%>
     <%if @cause.errors[:title].any?%>
@@ -32,8 +31,9 @@
     <%= button_tag "Save", type:"submit", class:"button_secondary"%>
     <%= button_tag "Reset", type:"reset", class:"button_primary"%>
   <%end%>
-
 </div>
+
+
 
 
 

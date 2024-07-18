@@ -1,7 +1,4 @@
-.button_primary{
-  padding: 9px 24px;
-  background-color: white;
-  border: 2px solid #E6E6E6;
+.button{
   border-radius: 20px;
   font-weight: 600;
   font-size: 12px;
@@ -9,7 +6,14 @@
   cursor: pointer;
   transition: color 0.5s, background-color 0.5s, border-color 0.5s;
   display: block !important;
+  padding: 9px 24px;
+}
 
+.button_primary{
+  @extend .button;
+  background-color: white;
+  border: 2px solid #E6E6E6;
+  
   &:hover{
     color: #fff;
     background-color: #f14b05;
@@ -18,19 +22,31 @@
   }
 }
 
-.button_secondary{
-  padding: 9px 24px;
-  background-color: #f14b05;
-  border: 2px solid #f14b05 ;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 12px;
-  margin-top: 10px;
-  cursor: pointer;
-  transition: color 0.5s, background-color 0.5s, border-color 0.5s;
-  color: white;
-  display: block !important;
+.button_inverse{
+  @extend .button_primary;
+  color: #f14b05;
+  &:hover{
+    border-color: #fff;
+  }
+}
 
+.button_transparent{
+  @extend .button;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+
+  &:hover{
+    color: black;
+    background-color:#fff;
+  }
+}
+
+.button_secondary{
+  @extend .button;
+  background-color: #f14b05;
+  border: 2px solid #f14b05;
+  color: white;
 
   &:hover{
     color: black;
@@ -39,3 +55,6 @@
 
   }
 }
+
+
+

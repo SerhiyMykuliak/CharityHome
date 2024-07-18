@@ -7,21 +7,21 @@
     <%=image_tag @cause.cause_picture, class:"image"%>
 
     <div class="cause__details">
-      <div class="date-box">
-        <div class="date">
+      <div class="cause__date-box">
+        <div class="cause__date">
           <div><%=@cause.created_at.strftime('%d')%></div>
           <div><%=@cause.created_at.strftime('%b')%></div>
         </div>
       </div>
-      <div class="cause__content">
 
-      <p class="mg"><%=@cause.description%></p>
-        <div class="campaign-summary">
-          <div class="campaign-summary__item">
+      <div class="cause__content">
+        <p class="cause__description"><%=@cause.description%></p>
+        <div class="cause__campaign-summary">
+          <div class="cause__campaign-summary-column">
             <span><%=progress_percentage(@cause.donated_amount, @cause.goal_amount)%>%</span>
             <p>Raised</p>  
           </div>
-          <div class="campaign-summary__item">
+          <div class="campaign-summary-column">
             <span>$<%=@cause.donated_amount%></span>
             <p>donated of $<%=@cause.goal_amount%> goal</p>
           </div>

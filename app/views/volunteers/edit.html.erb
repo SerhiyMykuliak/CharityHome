@@ -1,14 +1,11 @@
 
 <%= render 'layouts/hero_section', title: "EDIT VOLUNTEER" %>
 
-<div class="container">
+<div class="form-container">
   <div class="edit-form">
     <div class="picture">
       <%=image_tag @volunteer.profile_picture, class:"image"%>
     </div>
     <%= render 'form' %>
-
   </div>
-  
-
 </div>
