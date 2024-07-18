@@ -1,0 +1,14 @@
+
+<div class="form">
+  <%= form_with model: photo do |f| %>
+    <%= f.label "Title" %>
+    <%= f.text_field :title %>
+
+    <%= f.label "Photo" %>
+    <%= f.file_field :photo %>
+
+    <%= button_tag "Save", type:"submit", class:"button_secondary"%>
+    <%= button_tag "Reset", type:"reset", class:"button_primary"%>
+  <% end %>
+</div>
+

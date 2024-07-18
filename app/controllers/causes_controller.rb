@@ -33,12 +33,11 @@ class CausesController < ApplicationController
     if @cause.update(cause_params)
       redirect_to cause_path
     else
-      render :new, status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
-    
   end
-  
 
+  
   private
 
   def cause_params

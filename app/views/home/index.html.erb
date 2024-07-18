@@ -91,17 +91,34 @@
   </div>
 </div>
 
-<div class="galery">
+<section class="home_gallery">
   <div class="container">
     <div class="sec-title">
-        <h2 class="mb">Our Gallery</h2>
-        <p class="font-16 mb">Lorem ipsum is a dummy text it will use for subtitle here</p>
+        <h2 class="sec-title__heading">Our gallery</h2>
+        <p class="sec-title__text">Lorem ipsum is a dummy text it will use for subtitle here</p>
         <div class="decoration-circle-gray">
           <div class="decoration-point"></div>
         </div>
     </div>
   </div>
-</div>
+  <div class="gallery">
+    <% @photos.each do |photo| %>
+      <div class="gallery__image"><%=image_tag photo.photo%></div>
+    <% end %>
+  </div>
+</section>
+
+<section class="explore-our-gallery">
+  <div class="explore-our-gallery__conrainer container">
+    <div class="explore-our-gallery__cotent">
+      <h3 class="explore-our-gallery__title">Here will be any kind lorem ipsum heading</h3>
+      <p class="explore-our-gallery__subtitle">There are many variations of passages of Lorem Ipsum available, but the majority have lorem</p>
+    </div>
+    <div class="explore-our-gallery__button">
+      <%=button_to "VIEW FULL GALLERY", photo_galleries_path, method: "get",class:"button_inverse"%>
+    </div>
+  </div>
+</section>
 
 <section class="our-missions container">
   <div class="sec-title">
