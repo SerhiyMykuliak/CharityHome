@@ -1,0 +1,19 @@
+
+<div class="form">
+  <%= form_with model: post do |form| %>
+    
+    <%= form.label "Title" %>
+    <%= form.text_field :title %>
+
+    <%= form.label "Content" %>
+    <%= form.rich_text_area :content %>
+
+    <%= form.label "Post picture" %>
+    <%= form.file_field :post_picture %>
+
+    <%= button_tag "Save", type:"submit", class:"button_secondary"%>
+    <%= button_tag "Reset", type:"reset", class:"button_primary"%>
+
+  <% end %>
+</div>
+
