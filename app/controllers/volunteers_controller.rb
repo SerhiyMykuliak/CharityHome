@@ -33,11 +33,9 @@ class VolunteersController < ApplicationController
     if @volunteer.update(volunteer_params)
       redirect_to volunteer_path
     else  
-      render :new, status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
   end
-
-  
 
   private
 

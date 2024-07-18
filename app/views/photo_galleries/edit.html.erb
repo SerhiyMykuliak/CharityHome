@@ -1,0 +1,17 @@
+<%= render 'layouts/hero_section', title: "EDIT PHOTO" %>
+
+<div class="form-container">
+  <div class="edit-form">
+    <div class="picture">
+    
+    <% if @photo.photo.attached?%>
+      <%= image_tag @photo.photo%>
+    <% end %>
+    
+      
+    </div>
+    <%= render "form", photo: @photo %>
+  </div>
+</div>
+
+

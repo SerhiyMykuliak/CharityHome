@@ -1,0 +1,18 @@
+
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 70px 0 0;
+
+  &__image {
+    width: calc(25% - 4px);
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

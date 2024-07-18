@@ -211,9 +211,39 @@
   }
 }
 
-.galery{
+.home_gallery{
+  padding: 90px 0 0;
 
+  .gallery{
+    padding: 0;
+  }
 }
+
+.explore-our-gallery{
+  background-color: #eb5310;
+
+  &__conrainer{
+    padding: 55px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title{
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 23px;
+    margin-bottom: 16px;
+  }
+
+  &__subtitle{
+    font-size: 16px;
+    color: #D5E0EE;
+    margin: 0;
+    line-height: 25px;
+  }
+}
+
 
 .our-missions{
   padding: 90px 0 10px;

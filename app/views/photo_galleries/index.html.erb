@@ -1,0 +1,7 @@
+<%= render 'layouts/hero_section', title: "GALLERY" %>
+
+<div class="gallery">
+  <% @photos.each do |photo| %>
+    <div class="gallery__image"><%=image_tag photo.photo%></div>
+  <% end %>
+</div>
