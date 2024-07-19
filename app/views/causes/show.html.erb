@@ -7,10 +7,10 @@
     <%=image_tag @cause.cause_picture, class:"image"%>
 
     <div class="cause__details">
-      <div class="cause__date-box">
-        <div class="cause__date">
-          <div><%=@cause.created_at.strftime('%d')%></div>
-          <div><%=@cause.created_at.strftime('%b')%></div>
+      <div class="date-box">
+        <div class="date">
+          <div class="date__day"><%=@cause.created_at.strftime('%d')%></div>
+          <div class="date__month"><%=@cause.created_at.strftime('%b')%></div>
         </div>
       </div>
 
@@ -31,7 +31,7 @@
       </div>
     </div>
   </div>
-  <div class="side-bar-wiget"></div>  
+  <%= render 'layouts/right_bar' %> 
 </div>
 
 

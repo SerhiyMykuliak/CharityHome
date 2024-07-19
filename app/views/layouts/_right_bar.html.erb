@@ -1,0 +1,21 @@
+<div class="right-bar">
+  
+  <h3 class="right-bar__title">Resent Post</h3>
+  
+  <div class="right-bar__posts">
+    <% @recent_posts.each do |post| %>
+      <div class="right-bar__post">
+        <%=image_tag post.post_picture, class:"right-bar__post-picture"%>
+        <div class="right-bar__post-content">
+          <h4 class="right-bar__post-title"><%=link_to post.title, post%></h4>
+          <div class="right-bar__post-date"><%=post.created_at.strftime("%B %d, %Y")%></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+
+  <h3 class="right-bar__title">Archive</h3>
+  <h3 class="right-bar__title">Tag Cloud</h3>
+
+</div>

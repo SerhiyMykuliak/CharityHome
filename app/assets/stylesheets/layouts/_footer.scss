@@ -10,12 +10,6 @@
     padding: 90px 0;
     gap: 30px;
 
-    h3{
-      font-size: 20px;
-      color: #fff;
-      margin-bottom: 60px;
-    }
-
     ul{
       display: flex;
       gap: 20px;
@@ -24,7 +18,29 @@
         margin-bottom: 18px;
       }
     }
+  }
 
+  &__title{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 60px;
+  }
+
+  &__post{
+    margin-bottom: 20px;
+  }
+
+  &__post-title{
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  &__post-date{
+    color: #eb5310;
+    font-size: 13px;
+    margin-top: 10px;
   }
 
   &__about{

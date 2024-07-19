@@ -14,28 +14,6 @@
       margin-top: 25px;
     }
 
-    &__date-box{
-      width: 90px;
-      display: flex;
-      flex-direction: column;
-      margin-right: 25px;
-      
-    }
-
-    &__date{
-      color: white;
-      font-weight: 500;
-      text-transform: uppercase;
-      line-height: 27px;
-      background-color: #eb5310;
-      width: 90px;
-      height: 70px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-    }
-
     &__description{
       margin-bottom: 15px;
     }
@@ -52,10 +30,6 @@
       width: 50%;
     }
   }
-}
-
-.side-bar-wiget{
-  flex: 1;
 }
 
 

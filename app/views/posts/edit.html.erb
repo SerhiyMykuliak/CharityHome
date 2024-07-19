@@ -1,0 +1,12 @@
+<%= render 'layouts/hero_section', title: "EDIT CAUSE" %>
+
+<div class="form-container">
+  <div class="edit-form">
+    <div class="picture">
+      <%=image_tag @post.post_picture, class:"image"%>
+    </div>
+    <%= render 'form', post: @post %>
+  </div>
+</div>
+
+

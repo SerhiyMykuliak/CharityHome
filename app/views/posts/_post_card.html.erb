@@ -1,0 +1,26 @@
+
+
+<div class="post-card hover-box">
+  <div class="post-card__picture">
+    <div class="apear-box post-card__apear-box">
+      <%= link_to post do %>
+        <i class="fa-solid fa-link"></i>
+      <%end%>
+    </div>
+    <%=image_tag post.post_picture%>
+  </div>
+  <div class="post-card__details">
+      <div class="date-box">
+        <div class="date">
+          <div class="date__day"><%=post.created_at.strftime('%d')%></div>
+          <div class="date__month"><%=post.created_at.strftime('%b')%></div>
+        </div>
+      </div>
+    <div class="post-card__content">
+      <h3 class="post-card__title"><%=post.title%></h3>
+      <p class="post-card__description"><%=post.content.to_plain_text.truncate(125)%></p>
+    
+      <%=link_to "Read more", post, class: "post-card__link"%>
+    </div>
+ </div>
+</div>

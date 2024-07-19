@@ -31,7 +31,7 @@
             <li><%= link_to "HOME", root_path%></li>
             <li>ABOUT</li>
             <li><%= link_to "CAUSES", causes_path%></li>
-            <li>EVENTS</li>
+            <li><%= link_to "BLOG", posts_path%></li>
             <li><%= link_to "VOLUNTEER", volunteers_path%></li>
             <li><%= link_to "GALLERY", photo_galleries_path%></li>
             <li>CONTACT</li>
@@ -60,35 +60,47 @@
             <div class="footer__contacts">
               <p><i class="fa fa-map-marker"></i> 60 Grant Ave. Carteret NJ 0708</p>
               <p><i class="fa fa-phone"></i>(880)1723801729 </p>
-              <p><i class="fa fa-envelope-o"></i>example@gmail.com</p>
+              <p><i class="fa fa-regular fa-envelope"></i>example@gmail.com</p>
             </div>
             <div class="contacts footer__social">
               <%= link_to "https://www.facebook.com/" do %>
-                <i class="fa fa-facebook"></i>
+                <i class="fa-brands fa-facebook-f"></i>
               <% end %>
               <%= link_to "https://x.com/" do %>
-                <i class="fa fa-twitter"></i>
+                <i class="fa-brands fa-twitter"></i>
               <% end %>
               <%= link_to "https://www.linkedin.com/" do %>
-                <i class="fa fa-linkedin"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
               <% end %>
             </div>
           </div>
-        <div class="footer__pages">
-          <h3>Pages</h3>
-          <ul>
-            <li><%=link_to "Home", root_path%></li>
-            <li><%=link_to "Volunteers", volunteers_path%></li>
-          </ul>
-        </div>
-        <div class="footer__news">
-          <h3>Pages</h3>
-        </div>
-        <div class="footer__contact-us">
-          <h3>Pages</h3>
+
+          <div class="footer__pages">
+            <h3 class="footer__title">Pages</h3>
+            <ul>
+              <li><%=link_to "Home", root_path%></li>
+              <li><%=link_to "Volunteers", volunteers_path%></li>
+            </ul>
+          </div>
+
+          <div class="footer__news">
+            <h3 class="footer__title">Latest News</h3>
+            
+            <% @recent_posts.each do |post| %>
+              <div class="footer__post">
+                <%=link_to post.title, post, class:"footer__post-title"%>
+                <div class="footer__post-date"><%=post.created_at.strftime("%B %d, %Y")%></div>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="footer__contact-us">
+            <h3 class="footer__title">Pages</h3>
+          </div>
         </div>
       </div>
-        </div>
     </footer>
+
+    
   </body>
 </html>

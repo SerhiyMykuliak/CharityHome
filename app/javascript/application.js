@@ -2,7 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-import "volunteer_hover"
+import "hover_box"
 import "text_animations"
 import "slider"
 import { Turbo } from "@hotwired/turbo-rails"

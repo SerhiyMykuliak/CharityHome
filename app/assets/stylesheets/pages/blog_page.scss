@@ -1,0 +1,20 @@
+
+.blog{
+  padding: 90px 0;
+  
+  &__container{
+    display: flex;
+    gap: 30px;
+  }
+
+  &__posts{
+    width: 66.666667% ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+}
+
+
+
