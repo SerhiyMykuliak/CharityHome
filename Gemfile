@@ -72,6 +72,3 @@ gem 'sass-rails'
 gem 'font-awesome-sass'
 gem 'active_storage_validations', '~> 1.1', '>= 1.1.4'
 gem 'hotwire-rails'
-
-# Gem for paginations 
-gem 'kaminari'
