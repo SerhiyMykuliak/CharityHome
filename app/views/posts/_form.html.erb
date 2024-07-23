@@ -11,6 +11,16 @@
     <%= form.label "Post picture" %>
     <%= form.file_field :post_picture %>
 
+    
+    <%= form.label :tags %><br>
+    
+    <%if tags.present?%>
+      <% tags.each do |tag| %>
+        <%= check_box_tag 'post[tag_ids][]', tag.id, post.tag_ids.include?(tag.id) %>
+        <%= tag.name %><br>
+      <% end %>
+    <% end %>
+
     <%= button_tag "Save", type:"submit", class:"button_secondary"%>
     <%= button_tag "Reset", type:"reset", class:"button_primary"%>
 
