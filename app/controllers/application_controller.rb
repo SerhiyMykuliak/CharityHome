@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   helper_method :current_admin
-  before_action :load_recent_posts
+  before_action :load_recent_posts, :load_tags
 
   private
 
@@ -14,6 +14,10 @@ class ApplicationController < ActionController::Base
 
   def load_recent_posts
     @recent_posts = Post.order(created_at: :desc).limit(3)
+  end
+
+  def load_tags
+    @tags = Tag.all
   end
   
 end

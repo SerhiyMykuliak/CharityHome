@@ -5,7 +5,7 @@
     <div class="picture">
       <%=image_tag @post.post_picture, class:"image"%>
     </div>
-    <%= render 'form', post: @post %>
+    <%= render 'form', post: @post, tags: @tags %>
   </div>
 </div>
 

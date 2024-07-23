@@ -17,4 +17,14 @@
     margin-top: 25px;
   }
 
+  &__tags{
+    display: inline-block;
+    a{
+      color: #f3530f;
+
+      &:hover{
+        color: #000;
+      }
+    }
+  }
 }

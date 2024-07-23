@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   resources :volunteers
   resources :causes
 
+  get 'tags/:tag', to: 'posts#index', as: :tag
+
   root "home#index"
 end
