@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :causes
 
   get 'tags/:tag', to: 'posts#index', as: :tag
+  get 'about', to: 'pages#about'
 
-  root "home#index"
+  root "pages#home"
 end

@@ -1,0 +1,26 @@
+<section class="call-to-action">
+  <div class="call-to-action__box" style="background-image: url('<%= asset_path('left-box-bg.jpg') %>');">
+    <div class="call-to-action__icon"><i class="fa fa-coins icon"></i></div>
+    <div class="call-to-action__content">
+      <h3>DONATION</h3>
+      <p class="font-16 mb">There are many variations of lorem passagei of Lorem Ipsum availabl</p>
+      <%= button_to "DONATE NOW", causes_path, class:"button_transparent", method: "get" %>
+    </div>
+  </div>
+  <div class="call-to-action__box" style="background-image: url('<%= asset_path('center-box-bg.jpg') %>'); ::after{background-color: rgba(255, 115, 55, 0.8)}">
+    <div class="call-to-action__icon"><i class="fa-solid fa-user-group icon"></i></div>
+    <div class="call-to-action__content">
+      <h3>VOLUNTEER</h3>
+      <p class="font-16 mb">Vivamus sed pretium elit, quis luctusurna Curabitur id tempus massa</p>
+      <%= button_to "JOIN NOW", volunteers_path, class:"button_transparent", method: "get" %>
+    </div>
+  </div>
+  <div class="call-to-action__box" style="background-image: url('<%= asset_path('right-box-bg.jpg') %>');">
+    <div class="call-to-action__icon"><i class="fa-solid fa-hand-holding-heart icon"></i></div>
+    <div class="call-to-action__content">
+      <h3>FUNDRAISE</h3>
+      <p class="font-16 mb">Curabitur elementum euismod mi Vivamus massa augue vio</p>
+      <%= button_to "READER MORE", causes_path, class:"button_transparent", method: "get" %>
+    </div>
+  </div>
+</section>

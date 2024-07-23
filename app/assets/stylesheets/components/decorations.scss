@@ -62,6 +62,17 @@
   }
 }
 
+.decoration-circle-left{
+  @extend .decoration-circle;
+  
+  margin-top: 0;
+  
+  &::before{
+    left: 50px;
+  }
+}
+
+
 
 .decoration-double-line{
   width: 50px;

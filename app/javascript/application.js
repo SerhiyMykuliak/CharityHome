@@ -5,6 +5,7 @@ import "controllers"
 import "hover_box"
 import "text_animations"
 import "slider"
+import "accordion"
 import { Turbo } from "@hotwired/turbo-rails"
 
 import "trix"

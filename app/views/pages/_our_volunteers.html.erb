@@ -1,0 +1,23 @@
+<section class="meet-volunteer container">
+  <div class="sec-title sec-title-left">
+      <h2 class="sec-title__heading">Meet Our Volunteers</h2>
+      <p class="sec-title__text">Lorem ipsum is a dummy text it will use for subtitle here</p>
+      <div class="decoration-circle-gray">
+        <div class="decoration-point"></div>
+      </div>
+  </div>
+
+  <div class="meet-volunteer-swiper">
+    <div class="swiper-buttons">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <%@volunteers.each do |volunteer|%>
+          <div class="swiper-slide"><%= render 'volunteers/volunteer_card', volunteer: volunteer %></div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</section>

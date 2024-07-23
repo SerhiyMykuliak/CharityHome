@@ -1,0 +1,104 @@
+
+<div class="container">
+  <div class="appear-text">
+    <%"to feed and educate".split("").each do |symbol|%>
+      <div class="letter"><%=symbol%></div>
+    <%end%>
+  </div>
+
+
+  <div class="container2">
+    <div class="text">we need your support</div>
+  </div>
+  
+  <div class="appear">
+    Became the part to change the world
+  </div>
+
+  <div class="subtitle">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb
+  </div>
+</div>
+
+<%= render 'call_to_action' %>
+
+<section class="event-causes container">
+  <div class="event-causes__events"></div>
+  <div class="event-causes__featured-cause">
+    <h2>
+      FEATURED CAUSES
+      <div class="decoration-double-line"></div>
+    </h2>
+    
+    <%= render 'causes/cause_card_lg', cause: @feature_cause %>
+  </div>
+</section>
+
+<div class="bg" style="background-color:#f6f4f2;">
+  <section class="recent-causes container">
+    <div class="sec-title">
+        <h2 class="sec-title__heading">Recent Causes</h2>
+        <p class="sec-title__text">Lorem ipsum is a dummy text it will use for subtitle here</p>
+        <div class="decoration-circle-gray">
+          <div class="decoration-point"></div>
+        </div>
+    </div>
+
+    <div class="recent-causes__cards">
+      <%@recent_causes.each do |cause|%>
+        <%= render 'causes/cause_card_sm', cause: cause%>
+      <%end%>
+    </div>
+  </section>
+</div>
+
+<div class="bg-image--fixed" style="background-image: url('<%= asset_path('bg-widget-01') %>');">
+  <div class="promote-project">
+    <div class="promote-project__container container">
+        <h3 class="promote-project__title">Save Children From Hunger</h3>
+        <div class="decoration-circle-colored center">
+          <div class="decoration-point"></div>
+        </div>
+        <h2 class="promote-project__subtitle">BECAME A PART OF THE WORLD LOREM IPSUM</h2>
+        <p class="promote-project__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam quaerat atque, dolore. Amido ipsum dolor sit amet, consectetur adipisicing elit. Numquam quaerat atque, dolore.Lorem ipsum dolor sit amet, consectetur.</p>
+        <%= button_to "DONATE NOW", causes_path, method: :get, class: "button_secondary center" %>
+    </div>
+  </div>
+</div>
+
+<section class="home_gallery">
+  <div class="container">
+    <div class="sec-title">
+        <h2 class="sec-title__heading">Our gallery</h2>
+        <p class="sec-title__text">Lorem ipsum is a dummy text it will use for subtitle here</p>
+        <div class="decoration-circle-gray">
+          <div class="decoration-point"></div>
+        </div>
+    </div>
+  </div>
+  <div class="gallery">
+    <% @photos.each do |photo| %>
+      <div class="gallery__image"><%=image_tag photo.photo%></div>
+    <% end %>
+  </div>
+</section>
+
+<section class="explore-our-gallery">
+  <div class="explore-our-gallery__conrainer container">
+    <div class="explore-our-gallery__cotent">
+      <h3 class="explore-our-gallery__title">Here will be any kind lorem ipsum heading</h3>
+      <p class="explore-our-gallery__subtitle">There are many variations of passages of Lorem Ipsum available, but the majority have lorem</p>
+    </div>
+    <div class="explore-our-gallery__button">
+      <%=button_to "VIEW FULL GALLERY", photo_galleries_path, method: "get",class:"button_inverse"%>
+    </div>
+  </div>
+</section>
+
+<%= render 'our_missions' %>
+
+<%= render 'fact_counter' %>
+
+<%= render 'our_volunteers' %>
+
+<%= render 'testimonials' %>
