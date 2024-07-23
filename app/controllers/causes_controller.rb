@@ -1,7 +1,7 @@
 class CausesController < ApplicationController
 
   def index
-    @causes = Cause.all.order(created_at: :desc)
+    @causes = Cause.all.order(created_at: :desc).page(params[:page]).per(4)
   end
   
   def new

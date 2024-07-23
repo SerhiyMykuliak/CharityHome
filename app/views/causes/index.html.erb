@@ -6,4 +6,6 @@
   <% @causes.each do |cause| %>
     <%= render 'cause_card_lg', cause: cause %>
   <% end %>
+
+  <%= paginate @causes%>
 </div>

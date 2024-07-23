@@ -1,7 +1,7 @@
 class PhotoGalleriesController < ApplicationController
 
   def index
-    @photos = PhotoGallery.all
+    @photos = PhotoGallery.all.order(created_at: :desc).page(params[:page]).per(8)
   end
 
   def new

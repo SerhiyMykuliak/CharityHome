@@ -4,10 +4,17 @@ class PostsController < ApplicationController
   def index
     if params[:tag]
       @tag = Tag.find_by(name: params[:tag])
-      @posts = @tag.posts.order(created_at: :desc)
+      if @tag
+        @posts = @tag.posts.order(created_at: :desc).page(params[:page]).per(8)
+        @title = "Posts with Tag: #{params[:tag]}"
+      else
+        @posts = Post.none.page(params[:page]).per(8)
+        @title = "No posts found for Tag: #{params[:tag]}"
+      end
     else
-      @posts = Post.all.order(created_at: :desc)
-    end 
+      @posts = Post.all.order(created_at: :desc).page(params[:page]).per(8)
+      @title = "Blog"
+    end
   end
 
   def show

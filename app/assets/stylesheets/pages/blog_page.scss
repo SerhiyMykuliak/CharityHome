@@ -7,8 +7,11 @@
     gap: 30px;
   }
 
+  &__content{
+    width: 66.66667%;
+  }
+
   &__posts{
-    width: 66.666667% ;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;

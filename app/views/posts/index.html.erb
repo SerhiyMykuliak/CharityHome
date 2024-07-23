@@ -1,15 +1,19 @@
 
-<%= render 'layouts/hero_section', title: "BLOG" %>
+<%= render 'layouts/hero_section', title: @title %>
 
 
 <div class="blog">
   <div class="container blog__container">
-    <div class="blog__posts">
-      <% @posts.each do |post| %>
-        <%= render 'post_card', post: post %>
-      <% end %>
+    <div class="blog__content">
+      <div class="blog__posts">
+        <% @posts.each do |post| %>
+          <%= render 'post_card', post: post %>
+        <% end %>
+      </div>
+      <%= paginate @posts%>
     </div>
-    
+
     <%= render 'layouts/right_bar' %>
   </div>
+  
 </div>

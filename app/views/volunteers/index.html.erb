@@ -2,10 +2,9 @@
 <%= render 'layouts/hero_section', title: "VOLUNTEER" %>
 
 <div class="volunteers">
-
   <%@volunteers.each do |volunteer|%>
     <%= render 'volunteer_card', volunteer: volunteer %>
   <%end%>
-
 </div>
 
+<%=paginate @volunteers%>

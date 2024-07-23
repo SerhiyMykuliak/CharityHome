@@ -1,0 +1,26 @@
+.pagination{
+  display: block;
+  text-align: center;
+  margin: 80px 0 80px;
+
+  .current{
+    position: relative;
+    color: white;
+    font-size: 14px;
+    padding: 7px 15px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #eb5310;
+    background-color: #eb5310;
+  }
+
+  a{
+    position: relative;
+    color: #505050;
+    font-size: 14px;
+    padding: 7px 15px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #eb5310
+  }
+}
