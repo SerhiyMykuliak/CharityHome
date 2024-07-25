@@ -19,6 +19,7 @@
       <p class="mb"><%=cause.description.truncate(300)%></p>
     
       <%= button_to "DONATE NOW", cause_path(cause), method: :get, class: "button_secondary" %>
+      <%= render 'shared/change_delete_buttons', record: cause %>
     </div>
   </div>
 <%end%>

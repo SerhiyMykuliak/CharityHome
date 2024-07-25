@@ -21,6 +21,8 @@
       <p class="post-card__description"><%=post.content.to_plain_text.truncate(125)%></p>
     
       <%=link_to "Read more", post, class: "post-card__link"%>
+    
+       <%= render 'shared/change_delete_buttons', record: post %>
     </div>
  </div>
 </div>

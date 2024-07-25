@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
   
   def authenticate_admin
-    redirect_to new_session_path, notice: "You have to login to open this page" if current_admin.nil? 
+    redirect_to new_session_path, alert: "You have to login to open this page" if current_admin.nil? 
   end
 
   def load_recent_posts

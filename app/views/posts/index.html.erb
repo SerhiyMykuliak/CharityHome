@@ -5,6 +5,8 @@
 <div class="blog">
   <div class="container blog__container">
     <div class="blog__content">
+      <%= render 'shared/create_button', model: Post%>
+
       <div class="blog__posts">
         <% @posts.each do |post| %>
           <%= render 'post_card', post: post %>

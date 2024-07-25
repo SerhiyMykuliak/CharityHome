@@ -3,23 +3,39 @@
   <%= form_with model: post do |form| %>
     
     <%= form.label "Title" %>
+    <%if @post.errors[:title].any?%>
+      <div class="error-form-message"><%=@post.errors[:title].first%></div>
+    <%end%>
     <%= form.text_field :title %>
 
     <%= form.label "Content" %>
+    <%if @post.errors[:content].any?%>
+      <div class="error-form-message"><%=@post.errors[:content].first%></div>
+    <%end%>
     <%= form.rich_text_area :content %>
 
     <%= form.label "Post picture" %>
+    <%if @post.errors[:post_picture].any?%>
+      <div class="error-form-message"><%=@post.errors[:post_picture].first%></div>
+    <%end%>
     <%= form.file_field :post_picture %>
 
-    
     <%= form.label :tags %><br>
-    
-    <%if tags.present?%>
-      <% tags.each do |tag| %>
-        <%= check_box_tag 'post[tag_ids][]', tag.id, post.tag_ids.include?(tag.id) %>
-        <%= tag.name %><br>
+    <%if @post.errors[:tags].any?%>
+      <div class="error-form-message"><%=@post.errors[:tags].first%></div>
+    <%end%>
+
+    <div class="tag-container">
+      <%if tags.present?%>
+        <% tags.each do |tag| %>
+          <div class="tag-item">
+            <%= check_box_tag 'post[tag_ids][]', tag.id, post.tag_ids.include?(tag.id) %>
+            <%= tag.name %><br>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
+
 
     <%= button_tag "Save", type:"submit", class:"button_secondary"%>
     <%= button_tag "Reset", type:"reset", class:"button_primary"%>

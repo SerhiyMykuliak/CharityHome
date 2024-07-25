@@ -1,8 +1,15 @@
 <%= render 'layouts/hero_section', title: "GALLERY" %>
 
+<div class="container">
+  <%= render 'shared/create_button', model: PhotoGallery %>
+</div>
+
 <div class="gallery">
   <% @photos.each do |photo| %>
-    <div class="gallery__image"><%=image_tag photo.photo%></div>
+    <div class="gallery__image">
+      <%=image_tag photo.photo%>
+      <%= render 'shared/change_delete_buttons', record: photo %>
+    </div>
   <% end %>
 </div>
 

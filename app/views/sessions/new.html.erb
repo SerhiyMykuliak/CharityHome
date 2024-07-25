@@ -1,9 +1,15 @@
 
 <div class="form form-container">
-  <h2>Ведіть емайл і пароль для входу на сайт як адмін</h2>
+  <h2>Enter your email address and password to log in as an administrator</h2>
 
-  <%= flash[:alert] %>
-  <%= flash[:notice] %>
+  
+  <% if flash[:alert].present? %>
+    <div class="error-message"><%= flash[:alert] %></div>
+  <% end %>
+  
+  <% if flash[:notice].present?%>
+    <div class="error-message"><%= flash[:notice] %></div>
+  <% end %>
 
   <%= form_with scope: :session, url: session_path, data: {turbo: false} do |f|%>
     <p><%=f.label "Enter admin email"%></p>

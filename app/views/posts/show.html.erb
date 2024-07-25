@@ -12,6 +12,8 @@
       </div>
 
       <div class="post__content">
+      <%= render 'shared/change_delete_buttons', record: @post %>  
+
         <%=@post.content%>
 
         Tags:

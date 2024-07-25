@@ -108,6 +108,46 @@ li{
 }  
 
 
+  
+.error-message {
+  color: #e74c3c;
+  font-size: 14px; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 4px; 
+  border-radius: 4px;
+  border: 1px solid #e74c3c; 
+  background-color: #fce4e4; 
+  display: inline-block;
+}
+
+.change-delete-buttons{
+  display: flex;
+  gap: 10px;
+  margin: 20px 0 20px auto;
+  justify-content: end;
+  .button_delete {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+  }
+
+  .button_edit {
+    background-color: #ffc107;
+    color: #212529;
+    border: none;
+  }
+}
+
+.button_create{
+  background-color: #28a745; 
+  color: #fff; 
+  border: none;
+  margin: 20px 0 20px auto;
+  font-size: 16px;
+  
+}
+
 
 
 

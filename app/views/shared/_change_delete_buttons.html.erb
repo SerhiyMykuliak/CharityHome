@@ -1,0 +1,6 @@
+<% if current_admin.present? %>
+  <div class="change-delete-buttons">
+    <%= button_to "Change", edit_polymorphic_path(record), method: "get", class: "button_secondary button_edit" %>
+    <%= button_to "Delete", polymorphic_path(record), method: :delete, class: "button_primary button_delete", data: { turbo_confirm: "Are you sure you want to delete this record?" } %>
+  </div>
+<% end %>

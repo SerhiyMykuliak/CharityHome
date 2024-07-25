@@ -1,5 +1,6 @@
 class CausesController < ApplicationController
   before_action :set_cause, only: [:edit, :update, :show, :destroy]
+  before_action :authenticate_admin, only: [:edit, :new, :create, :edit, :update, :destroy]
 
   def index
     @causes = Cause.all.order(created_at: :desc).page(params[:page]).per(4)
@@ -35,6 +36,8 @@ class CausesController < ApplicationController
   end
 
   def destroy
+    @cause.destroy!
+    redirect_to causes_path
   end 
 
   private
