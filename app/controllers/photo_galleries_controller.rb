@@ -1,5 +1,6 @@
 class PhotoGalleriesController < ApplicationController
-
+  before_action :authenticate_admin, only: [:edit, :new, :create, :edit, :update, :destroy]
+  
   def index
     @photos = PhotoGallery.all.order(created_at: :desc).page(params[:page]).per(8)
   end

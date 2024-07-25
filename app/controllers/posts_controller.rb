@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_admin, only: [:edit, :new, :create, :edit, :update, :destroy]
+  
   def index
     if params[:tag]
       @tag = Tag.find_by(name: params[:tag])
@@ -22,7 +23,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = Post.new()
     @tags = Tag.all
   end
 
@@ -32,10 +33,9 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to @post
     else
-      @tags = Tag.all
-      render :new, status: :unprocessable_entity 
+      render :new, status: :unprocessable_entity
     end
-    
+
   end
 
   def edit
@@ -55,9 +55,8 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy!
+    redirect_to posts_path
   end
-
-  
 
   private
     def set_post

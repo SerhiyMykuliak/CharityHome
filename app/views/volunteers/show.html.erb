@@ -7,6 +7,8 @@
     <div class="volunteer-profile__picture"><%=image_tag @volunteer.profile_picture%></div>
 
     <div class="volunteer-profile__information">
+
+      <%= render 'shared/change_delete_buttons', record: @volunteer %>
       <div class="volunteer-profile__name"><%= @volunteer.name%></div>
       <div class="volunteer-profile__job"><%= @volunteer.job%></div>
 

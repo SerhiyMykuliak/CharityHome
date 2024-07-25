@@ -12,7 +12,9 @@
         
         <%if current_admin.present?%>
           <li>
-            <%= current_admin.email%>
+            <div class="admin-emial" style="margin-right: 10px;">
+              <%= current_admin.email%>
+            </div>
           </li>
           <li>
             <%= button_to "Log out", session_path, method: :delete, class: "button_secondary"%>

@@ -1,8 +1,9 @@
 
 <%= render 'layouts/hero_section', title: @cause.title %>
+  
 
 <div class="container cause-container">
-  
+
   <div class="cause">
     <%=image_tag @cause.cause_picture, class:"image"%>
 
@@ -15,6 +16,8 @@
       </div>
 
       <div class="cause__content">
+        <%= render 'shared/change_delete_buttons', record: @cause %>
+
         <p class="cause__description"><%=@cause.description%></p>
         <div class="cause__campaign-summary">
           <div class="cause__campaign-summary-column">

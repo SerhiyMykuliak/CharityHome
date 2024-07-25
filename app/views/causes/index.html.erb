@@ -1,8 +1,9 @@
-
-
 <%= render 'layouts/hero_section', title: "CAUSES" %>
 
 <div class="causes-container container">
+
+  <%= render 'shared/create_button', model: Cause %>
+
   <% @causes.each do |cause| %>
     <%= render 'cause_card_lg', cause: cause %>
   <% end %>
@@ -10,4 +11,3 @@
   <%= paginate @causes%>
 </div>
 
-<%= render 'pages/promote_project' %>
