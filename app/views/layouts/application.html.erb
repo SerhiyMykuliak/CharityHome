@@ -25,6 +25,10 @@
   </head>
 
   <body>
+    
+    <% if flash[:notice] %>
+      <div class="flash-message"><%= flash[:notice]%></div>
+    <% end %>
 
     <%= render 'layouts/header' %>
     <%= render 'layouts/main_menu' %>
@@ -33,5 +37,6 @@
 
     <%= render 'layouts/footer' %>
 
+    
   </body>
 </html>

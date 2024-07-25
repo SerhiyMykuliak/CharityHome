@@ -16,14 +16,20 @@
       <div class="volunteer-profile__description"><%=@volunteer.description%></div>  
     
         <div class="contacts volunteer-profile__contacts">
-          <%= link_to @volunteer.facebook_url do %>
-            <i class="fa-brands fa-facebook-f"></i>
+          <% if @volunteer.facebook_url.present? %>
+            <%= link_to @volunteer.facebook_url do %>
+              <i class="fa-brands fa-facebook-f"></i>
+            <% end %>
           <% end %>
-          <%= link_to @volunteer.twitter_url do %>
-            <i class="fa-brands fa-twitter"></i>
+          <% if @volunteer.twitter_url.present? %>
+            <%= link_to @volunteer.twitter_url do %>
+              <i class="fa-brands fa-twitter"></i>
+            <% end %>
           <% end %>
-          <%= link_to @volunteer.linkedin_url do %>
-            <i class="fa-brands fa-linkedin-in"></i>
+          <% if @volunteer.linkedin_url.present? %>
+            <%= link_to @volunteer.linkedin_url do %>
+              <i class="fa-brands fa-linkedin-in"></i>
+            <% end %>
           <% end %>
        </div>
 

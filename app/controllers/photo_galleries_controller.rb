@@ -13,7 +13,7 @@ class PhotoGalleriesController < ApplicationController
     @photo = PhotoGallery.new(photo_params)
 
     if @photo.save
-      redirect_to photo_galleries_path
+      redirect_to photo_galleries_path, notice: "Photo succesfuly added"
     else
       render :new, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class PhotoGalleriesController < ApplicationController
     @photo = PhotoGallery.find(params[:id])
 
     if @photo.update(photo_params)
-      redirect_to photo_galleries_path
+      redirect_to photo_galleries_path, notice: "Photo succesfuly updated"
     else
       render :edit, status: :unprocessable_entity
     end
@@ -36,6 +36,8 @@ class PhotoGalleriesController < ApplicationController
 
   def destroy
     @photo.destroy!
+    
+    redirect_to root_path, notice: "Photo succesfuly deleted"
   end
 
   private

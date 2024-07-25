@@ -15,7 +15,7 @@ class CausesController < ApplicationController
     @cause = Cause.new(cause_params)
 
     if @cause.save
-      redirect_to causes_path
+      redirect_to causes_path, notice: "Cause succesfuly created"
     else
       render :new, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class CausesController < ApplicationController
   
   def update
     if @cause.update(cause_params)
-      redirect_to cause_path
+      redirect_to cause_path, notice: "Cause succesfuly updated"
     else
       render :edit, status: :unprocessable_entity
     end
@@ -37,7 +37,7 @@ class CausesController < ApplicationController
 
   def destroy
     @cause.destroy!
-    redirect_to causes_path
+    redirect_to causes_path, notice: "Cause succesfuly deleted"
   end 
 
   private

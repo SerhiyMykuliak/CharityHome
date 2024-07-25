@@ -1,14 +1,20 @@
 <div class="volunteer hover-box">
   <div class="volunteer__profile-image-wrap">
     <div class="contacts apear-box">
-      <%= link_to volunteer.facebook_url do %>
-        <i class="fa-brands fa-facebook-f"></i>
+      <% if volunteer.facebook_url.present? %>
+        <%= link_to volunteer.facebook_url do %>
+          <i class="fa-brands fa-facebook-f"></i>
+        <% end %>
       <% end %>
-      <%= link_to volunteer.twitter_url do %>
-        <i class="fa-brands fa-twitter"></i>
+      <% if volunteer.twitter_url.present? %>
+        <%= link_to volunteer.twitter_url do %>
+          <i class="fa-brands fa-twitter"></i>
+        <% end %>
       <% end %>
-      <%= link_to volunteer.linkedin_url do %>
-        <i class="fa-brands fa-linkedin-in"></i>
+      <% if volunteer.linkedin_url.present? %>
+        <%= link_to volunteer.linkedin_url do %>
+          <i class="fa-brands fa-linkedin-in"></i>
+        <% end %>
       <% end %>
     </div>
     <%=image_tag volunteer.profile_picture, class: "profile_image"%>
