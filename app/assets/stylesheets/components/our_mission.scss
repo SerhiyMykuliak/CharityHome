@@ -1,0 +1,55 @@
+.our-missions{
+  padding: 90px 0 10px;
+
+  .missions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .mission{
+      flex: 1 1 calc(33.333% - 30px);
+      height: 300px;
+      display: flex;
+      height: 233px;
+      gap: 27px;
+      justify-content: center;
+
+      &__icon{
+        min-width: 80px;
+        height: 80px;
+        background-color: #eb5310;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        i{
+          font-size: 35px;
+          color: white;
+          
+        }
+
+        &::after{
+          content: " ";
+          width: 0;
+          height: 0;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          border-left: 30px solid transparent;
+          border-top: 30px solid transparent;
+          border-bottom: 30px solid white;
+        }
+      }
+
+      &__title{
+        margin-bottom: 15px;
+        font-size: 21px;
+      }
+
+      &__description{
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

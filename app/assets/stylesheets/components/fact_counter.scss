@@ -1,0 +1,70 @@
+.fact-counter{
+  background-color: #eb5310 ;
+  display: flex;
+  color: white;
+
+  &__container{
+    padding: 55px 0;
+  }
+
+  &__title-wrap{
+    flex: 1;
+
+    .button_primary{
+      color: #eb5310;
+    }
+  }
+
+  &__title{
+    color: white;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+  }  
+
+  &__facts{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 70px;
+
+    .fact{
+      text-align: center;
+
+      &__icon{
+        margin-bottom: 14px;
+      }
+
+      i{
+        font-size: 50px;
+        display: inline-block;
+        color: black;
+        width: 100px;
+        height: 100px; 
+        border-radius: 50%;
+        text-align: center; 
+        line-height: 100px; 
+        border: 2px solid white;
+        color: white;
+      }
+
+      &__timer{
+        font-size: 48px;
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+      }
+
+      &__description{
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: white;
+      }      
+    }  
+  }
+
+  &__content{ 
+    display: flex;    
+  }
+}

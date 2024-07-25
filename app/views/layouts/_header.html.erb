@@ -1,0 +1,24 @@
+<header class="header container">
+  <div class="logo header__logo">
+    <%=image_tag "dark-logo.png"%>
+  </div>
+
+  <div class="header__right-bar">
+    <div class="header__single-info-box">
+      <div class="header__icon"><i class="fa fa-solid fa-envelope-open-text"></i></div>
+        <div class="header__content">
+          <h4>EMAIL</h4>
+          <p>companyname@mail.com</p>
+        </div>  
+    </div>   
+    <div class="header__single-info-box">
+      <div class="header__icon"><i class="fa fa-solid fa-mobile-screen"></i></div>
+      <div class="header__content">
+        <h4>CALL NOW</h4>
+        <b>(732) 803-010-03</b>
+      </div>
+    </div>   
+
+    <%= button_to "DONATE NOW", causes_path, method: :get, class: "button_secondary center" %>
+  </div>
+</header>

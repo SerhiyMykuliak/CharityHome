@@ -14,7 +14,6 @@ class SessionsController < ApplicationController
       flash.now[:alert] = "Не ввійшли"
       render :new
     end
-
   end
 
   def destroy

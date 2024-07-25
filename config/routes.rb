@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get 'tags/:tag', to: 'posts#index', as: :tag
   get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
 
   root "pages#home"
 end

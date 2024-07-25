@@ -1,0 +1,62 @@
+<%= render 'layouts/hero_section', title: "Contact" %>
+
+
+<div class="contact container">
+
+  <p class="contact__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknownto</p>
+
+  <div id="map" style="height: 400px; width: 100%;"></div>
+
+  <div class="contact__content">
+    <div class="form">
+      <h2 class="contact__title">Contact Form</h2>
+      <%= form_with scope: :contact_form do |f| %>
+        <div>
+          <%=f.text_field :name, placeholder: "Name"%>
+          <%=f.text_field :email, placeholder: "Email"%>
+          <%=f.text_field :phone, placeholder: "Phone"%>
+
+           <%= button_tag "SUBMIT", type:"submit", class:"button_secondary"%>
+        </div>
+
+        <%=f.text_area :message, placeholder: "Message"%>
+      <% end %>
+    </div>
+    
+    <div class="contact__address">
+      <h2 class="contact__title">Address</h2>
+
+      <div class="contact__info">
+        <div class="contact__icon">
+          <i class="fa fa fa-map-marker"></i>
+        </div>
+
+        <div>        
+          <h4>ADDRESS</h4>
+          <p>Mirpur New Bazar Road, Block-c, Uttara, Dhaka-1210</p>
+        </div>
+      </div>
+
+      <div class="contact__info">
+        <div class="contact__icon">
+          <i class="fa fa fa-phone"></i>
+        </div>
+        <div>        
+          <h4>PHONE</h4>
+          <p>(732) 803-01 03, (732) 806-01 04, (880)172380129</p>
+        </div>
+      </div>
+
+      <div class="contact__info">
+        <div class="contact__icon">
+          <i class="fa fa fa-envelope"></i>
+        </div>
+
+        <div>        
+          <h4>EMAIL</h4>
+          <p>info@somecompanyname.com, otheremail@gmail.com</p>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>

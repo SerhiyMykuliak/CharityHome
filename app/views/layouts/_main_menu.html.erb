@@ -1,0 +1,30 @@
+<div class="main-menu">
+  <div class="container">
+    <div class="nav">
+      <ul>
+        <li><%= link_to "HOME", root_path %></li>
+        <li><%= link_to "ABOUT", '/about' %></li>
+        <li><%= link_to "CAUSES", causes_path %></li>
+        <li><%= link_to "BLOG", posts_path %></li>
+        <li><%= link_to "VOLUNTEER", volunteers_path %></li>
+        <li><%= link_to "GALLERY", photo_galleries_path %></li>
+        <li><%= link_to "CONTACT", '/contact' %></li>
+        
+        <%if current_admin.present?%>
+          <li>
+            <%= current_admin.email%>
+          </li>
+          <li>
+            <%= button_to "Log out", session_path, method: :delete, class: "button_secondary"%>
+          </li>
+        <%else%>
+          <li>
+            <%= link_to "Log in", new_session_path%>
+          </li>
+        <%end%>
+
+      </ul>
+    </div>
+    <div class="search"><i class="fa fa-search search-icon"></i></div>
+  </div>
+</div>

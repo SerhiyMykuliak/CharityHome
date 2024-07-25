@@ -4,9 +4,8 @@
   
   &__container{
     width: 1180px;
-    margin: 20px auto 0 auto;
+    margin: 0 auto 0 auto;
     display: flex;
-    gap: 20px;
     padding: 90px 0;
     gap: 30px;
 
@@ -14,8 +13,9 @@
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
+
       li{
-        margin-bottom: 18px;
+        flex-basis: calc(50% - 20px);
       }
     }
   }
@@ -47,6 +47,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 25%;
   }
   
   &__contacts{
@@ -66,8 +67,41 @@
     }
   }
 
+  &__news{
+    width: 25%;
+  }
+
   &__pages{
     display: flex;
     flex-direction: column;
+    width: 25%;
+  }
+
+  &__contact-us{
+    width: 25%;
+  }
+
+  .form{
+
+    form{
+      input[type="text"],
+      input[type="number"]{
+        width: 100%;
+        background: #2C353C;
+        border: none;
+        height: 50px;
+      }
+
+      textarea{
+        background: #2C353C;
+        border: none;
+        height: 100px;
+        resize: vertical;
+      }
+
+      .button_secondary{
+        border-radius: 0;
+      }
+    }
   }
 }

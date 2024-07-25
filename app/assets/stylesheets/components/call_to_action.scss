@@ -1,0 +1,63 @@
+.call-to-action{
+  width: 100%;
+  display: flex;
+
+  &__box{
+    width: 33.333%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 70px;
+    gap: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+    &::after{
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(241, 75, 5, 0.8);
+      z-index: 0;
+      transition: filter 0.5s;
+    }
+
+    &:hover::after{
+      filter: brightness(80%);  
+    }
+
+    &:nth-child(2n)::after {
+      background-color: rgba(253, 97, 30, 0.8);;
+    }
+  }
+
+  &__icon{
+    z-index: 1;
+
+    .icon{
+      color: white;
+      font-size: 50px;
+    }
+  }
+
+  &__content{
+    z-index: 1;
+
+    h3{
+      margin: 0 0 15px 0;
+      font-size: 28px;
+      text-transform: uppercase;
+      color: white;
+    }
+    
+    p{
+      color: white;
+      font-weight: 300;
+    }
+  }
+}
