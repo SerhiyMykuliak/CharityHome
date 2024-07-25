@@ -1,12 +1,3 @@
-.volunteers{
-  width: 1180px;
-  margin: 90px auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-
-}
-
 .volunteer{
   flex: 0 0 calc(25% - 30px);
   
@@ -42,5 +33,9 @@
   &__description{
     color: #9C9C9C;
 
+  }
+
+  &__button_primary{
+    margin-top: 13px;
   }
 }

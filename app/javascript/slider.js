@@ -50,3 +50,28 @@ document.addEventListener('turbo:load', () => {
   });
 });
 
+document.addEventListener('turbo:load', () => {
+  const swiper = new Swiper('.swiper-features-posts-container', {
+    
+    direction: 'horizontal',
+    loop: true,
+
+    navigation: {
+      nextEl: '.swiper-button-next', 
+      prevEl: '.swiper-button-prev',
+    },
+
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false, 
+    },
+ 
+    effect: 'slide',
+    speed: 800,
+    slidesPerView: 1,
+   
+    spaceBetween: 40,
+    allowTouchMove: true,
+
+  });
+});

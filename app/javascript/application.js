@@ -6,7 +6,9 @@ import "hover_box"
 import "text_animations"
 import "slider"
 import "accordion"
+import "google_map"
 import { Turbo } from "@hotwired/turbo-rails"
 
 import "trix"
 import "@rails/actiontext"
+

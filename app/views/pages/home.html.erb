@@ -1,32 +1,56 @@
 
-<div class="container">
-  <div class="appear-text">
-    <%"to feed and educate".split("").each do |symbol|%>
-      <div class="letter"><%=symbol%></div>
-    <%end%>
-  </div>
+<section class="home">
+  <div class="container home__container">   
+    <div class="animated-title-1">
+      <%"to feed and educate!".split("").each do |symbol|%>
+        <div class="letter"><%=symbol%></div>
+      <%end%>
+    </div>
 
+    <div class="animated-title-2">
+      <div class="text">we need your support</div>
+    </div>
+    
+    <div class="animated-title-3">
+      Became part to change the world
+    </div>
 
-  <div class="container2">
-    <div class="text">we need your support</div>
-  </div>
-  
-  <div class="appear">
-    Became the part to change the world
-  </div>
+    <div class="subtitle">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ev
+    </div>
 
-  <div class="subtitle">
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramb
-  </div>
-</div>
+    <div class="home__buttons">
+      <%= button_to "DONATE NOW", causes_path, method: :get, class: "button_secondary home__button-secondary" %>
+      <%= button_to "LEARN MORE", "about", method: :get, class: "button_primary home__button-primary" %>
+    </div>
+ </div>
+</section>
+
 
 <%= render 'call_to_action' %>
 
 <section class="event-causes container">
-  <div class="event-causes__events"></div>
+  <div class="event-causes__posts">
+    <h2>
+      RECENT POSTS
+      <div class="decoration-double-line"></div>
+    </h2>
+
+    <div class="swiper-buttons">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"> </div>
+    </div>
+    <div class="swiper-features-posts-container">
+      <div class="swiper-wrapper">
+        <%@feature_posts_s.each do |post|%>
+          <div class="swiper-slide"><%= render 'posts/post_card', post: post %></div>
+        <%end%>
+      </div>
+    </div>
+  </div>
   <div class="event-causes__featured-cause">
     <h2>
-      FEATURED CAUSES
+      FEATURED CAUSE
       <div class="decoration-double-line"></div>
     </h2>
     
@@ -52,19 +76,7 @@
   </section>
 </div>
 
-<div class="bg-image--fixed" style="background-image: url('<%= asset_path('bg-widget-01') %>');">
-  <div class="promote-project">
-    <div class="promote-project__container container">
-        <h3 class="promote-project__title">Save Children From Hunger</h3>
-        <div class="decoration-circle-colored center">
-          <div class="decoration-point"></div>
-        </div>
-        <h2 class="promote-project__subtitle">BECAME A PART OF THE WORLD LOREM IPSUM</h2>
-        <p class="promote-project__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam quaerat atque, dolore. Amido ipsum dolor sit amet, consectetur adipisicing elit. Numquam quaerat atque, dolore.Lorem ipsum dolor sit amet, consectetur.</p>
-        <%= button_to "DONATE NOW", causes_path, method: :get, class: "button_secondary center" %>
-    </div>
-  </div>
-</div>
+<%= render 'promote_project' %>
 
 <section class="home_gallery">
   <div class="container">
