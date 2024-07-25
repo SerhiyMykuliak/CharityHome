@@ -14,7 +14,7 @@ class VolunteersController < ApplicationController
     @volunteer = Volunteer.new(volunteer_params)
 
     if @volunteer.save
-      redirect_to volunteers_path
+      redirect_to volunteers_path, notice: "Volunteer succesfuly created"
     else
       render :new, status: :unprocessable_entity
     end
@@ -28,7 +28,7 @@ class VolunteersController < ApplicationController
   
   def update
     if @volunteer.update(volunteer_params)
-      redirect_to volunteer_path
+      redirect_to volunteer_path, notice: "Volunteer succesfuly updated"
     else  
       render :edit, status: :unprocessable_entity
     end
@@ -36,7 +36,7 @@ class VolunteersController < ApplicationController
 
   def destroy
     @volunteer.destroy!
-    redirect_to volunteers_path
+    redirect_to volunteers_path, notice: "Volunteer succesfuly deleted"
   end
 
   private

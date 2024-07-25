@@ -12,3 +12,13 @@ import { Turbo } from "@hotwired/turbo-rails"
 import "trix"
 import "@rails/actiontext"
 
+
+
+document.addEventListener("turbo:load", function() {
+
+  const flashMessage = document.querySelector(".flash-message")
+
+  setTimeout( () => {
+    flashMessage.classList.add("hidden")
+  }, 3000)
+});
