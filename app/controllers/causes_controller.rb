@@ -21,7 +21,7 @@ class CausesController < ApplicationController
     end
   end
 
-  def show   
+  def show
   end
 
   def edit
@@ -49,5 +49,4 @@ class CausesController < ApplicationController
   def set_cause
     @cause = Cause.find(params[:id])
   end
-  
 end

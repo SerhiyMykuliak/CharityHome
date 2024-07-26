@@ -1,3 +1,4 @@
+@import 'base/variables';
 
 *{
   font-family: 'Poppins';
@@ -34,7 +35,7 @@ a{
   transition: color 0.2s;
 
   &:hover{
-    color: #eb5310;
+    color: $primary-color;
   }
 }
 

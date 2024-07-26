@@ -11,6 +11,7 @@ pin "text_animations", to: "text_animations.js"
 pin "slider", to: "slider.js"
 pin "accordion", to: "accordion.js"
 pin "google_map", to: "google_map.js"
+pin "stripe_implement", to: "stripe_implement.js"
 
 pin "trix"
 pin "@rails/actiontext", to: "actiontext.esm.js"

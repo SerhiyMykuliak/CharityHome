@@ -1,0 +1,37 @@
+<%= render 'layouts/hero_section', title: "Make a Donation" %>
+<div class="donation container">
+
+  <div class="donation__form form">
+    <h2>Donation form</h2>
+
+    <%= form_with url: cause_donations_path(@cause), method: :post, local: true, id: 'donation-form' do |f| %>
+      <% if flash[:error].present? %>
+        <div class="error-form-message"><%= flash[:error] %></div>
+      <% end %>
+      
+      <%= f.label :amount, 'Donation Amount(USD)' %>
+      <%= f.number_field :amount, min: 5, step: 5, required: true %>
+    
+      <label for="card-element">Credit or Debit Card</label>
+      
+      <div id="card-element"></div>
+      <div id="card-errors" role="alert"></div>
+    
+      <%= f.hidden_field :cause_id, value: @cause.id %>
+
+      <%= button_tag "Donate", type:"submit", class:"button_secondary" %>
+    <% end %>
+  </div>
+
+  <div class="donation__cause">
+    <h2><%= @cause.title %> </h2>
+
+    <div class="image"><%= image_tag @cause.cause_picture %></div>
+    <p><%= @cause.description.truncate(200) %></p>
+  </div>
+</div>
+
+<script>
+
+
+</script>

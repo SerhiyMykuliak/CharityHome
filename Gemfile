@@ -75,3 +75,6 @@ gem 'hotwire-rails'
 
 # Pagination gem 
 gem 'kaminari'
+
+# Gem for payment
+gem 'stripe'

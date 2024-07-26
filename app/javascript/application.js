@@ -2,11 +2,13 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
+import "stripe_implement"
 import "hover_box"
 import "text_animations"
 import "slider"
 import "accordion"
 import "google_map"
+
 import { Turbo } from "@hotwired/turbo-rails"
 
 import "trix"
@@ -15,10 +17,11 @@ import "@rails/actiontext"
 
 
 document.addEventListener("turbo:load", function() {
+  const flashMessage = document.querySelector(".flash-message");
 
-  const flashMessage = document.querySelector(".flash-message")
-
-  setTimeout( () => {
-    flashMessage.classList.add("hidden")
-  }, 3000)
+  if (flashMessage) {
+    setTimeout( () => {
+      flashMessage.classList.add("hidden");
+    }, 3000) ;
+  }
 });

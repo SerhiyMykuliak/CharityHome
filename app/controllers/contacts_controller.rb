@@ -10,7 +10,7 @@ class ContactsController < ApplicationController
       message: contact_params[:message]
     ).deliver_now
 
-    redirect_to root_path, notice: "Everysing okey"
+    redirect_to root_path, notice: "Your email has been successfully sent"
   end 
 
 end

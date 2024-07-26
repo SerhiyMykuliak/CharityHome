@@ -1,0 +1,37 @@
+
+.donation{
+  display: flex;
+  padding: 90px 0;
+
+  &__form{
+    width: 50%;
+
+    form{
+      
+      .button_secondary{
+        width: fit-content;
+      }
+    }
+  }
+
+  &__cause{
+    width: 50%;
+  }
+
+}
+
+#card-element {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+#card-errors {
+  color: #f44336;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}

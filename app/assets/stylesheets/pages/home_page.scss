@@ -126,10 +126,10 @@
 .event-causes{
   display: flex;
   padding: 90px 0;
-  gap: 30px;
+  gap: 50px;
   
   &__posts{
-    width: 50%;
+    width: 40%;
     position: relative;
 
     .post-card{
@@ -160,7 +160,7 @@
   }
 
   &__featured-cause{
-    width: 50%;
+    width: 60%;
   }
   
 }

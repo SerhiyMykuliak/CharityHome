@@ -1,5 +1,5 @@
 <%if cause%>
-  <%progress = progress_percentage(cause.donated_amount, cause.goal_amount)%>
+  <%progress = progress_percentage(cause.total_donations_amount, cause.goal_amount)%>
 
   <div class="cause-lg">
     <div class="cause-lg__picture-wrap">
@@ -15,10 +15,14 @@
 
     <div class="cause-lg__details">
       <h3><%=cause.title%></h3>
-      <p class="cause-lg__donates"><%= "$#{cause.donated_amount} donated of $#{cause.goal_amount}" %></p>
+      <p class="cause-lg__donates"><%= "$#{cause.total_donations_amount} donated of $#{cause.goal_amount}" %></p>
       <p class="mb"><%=cause.description.truncate(300)%></p>
-    
-      <%= button_to "DONATE NOW", cause_path(cause), method: :get, class: "button_secondary" %>
+      
+      <div class="buttons-container">
+        <%= button_to "DONATE NOW", new_cause_donation_path(cause), method: :get, class: "button_secondary" %>
+        <%= button_to "READE MORE", cause_path(cause), method: :get, class: "button_primary" %>
+      </div>
+
       <%= render 'shared/change_delete_buttons', record: cause %>
     </div>
   </div>

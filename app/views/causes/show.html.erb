@@ -3,7 +3,6 @@
   
 
 <div class="container cause-container">
-
   <div class="cause">
     <%=image_tag @cause.cause_picture, class:"image"%>
 
@@ -19,14 +18,21 @@
         <%= render 'shared/change_delete_buttons', record: @cause %>
 
         <p class="cause__description"><%=@cause.description%></p>
-        <div class="cause__campaign-summary">
-          <div class="cause__campaign-summary-column">
-            <span><%=progress_percentage(@cause.donated_amount, @cause.goal_amount)%>%</span>
+        <div class="cause__campaing-summary">
+          <div class="cause__campaing-summary-column">
+            <span><%=progress_percentage(@cause.total_donations_amount, @cause.goal_amount)%>%</span>
             <p>Raised</p>  
           </div>
-          <div class="campaign-summary-column">
-            <span>$<%=@cause.donated_amount%></span>
+          <div class="cause__campaing-summary-column">
+            <span>$<%=@cause.total_donations_amount%></span>
             <p>donated of $<%=@cause.goal_amount%> goal</p>
+          </div>
+          <div class="cause__campaing-summary-column">
+            <span><%= @cause.total_donations_count %></span>
+            <p>Donors</p>  
+          </div>
+          <div class="cause__campaing-summary-column">
+            <span><%= button_to "DONATE NOW", new_cause_donation_path(@cause), method: :get, class: "button_secondary" %></span>
           </div>
         </div>
 

@@ -9,9 +9,9 @@ class SessionsController < ApplicationController
 
     if admin.present?
       session[:admin_id] = admin.id
-      redirect_to root_path, notice: "Ввійшли"
+      redirect_to root_path, notice: "You have successfully logged in"
     else
-      flash.now[:alert] = "Не ввійшли"
+      flash.now[:alert] = "Incorect email or password"
       render :new
     end
   end
