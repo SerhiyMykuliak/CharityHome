@@ -26,7 +26,7 @@
   <div class="donation__cause">
     <h2><%= @cause.title %> </h2>
 
-    <div class="image"><%= image_tag @cause.cause_picture %></div>
+    <div class="image"><%= image_tag @cause.cause_picture, class:"image" %></div>
     <p><%= @cause.description.truncate(200) %></p>
   </div>
 </div>

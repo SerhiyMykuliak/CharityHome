@@ -1,5 +1,5 @@
 .promote-project{
-  text-align: center;
+  flex-direction: column;
   padding: 80px 0;
   position: relative;
 
@@ -7,6 +7,7 @@
     width: 800px !important;
     position: relative;
     z-index: 1;
+    text-align: center;
   }
 
   &__title{
@@ -39,7 +40,7 @@
     justify-content: center;
 
     .button_inverse{
-      border-color: #eb5310;
+      border-color: $primary-button-color;
     }
   }
 
@@ -53,5 +54,18 @@
     background-color: rgba(255,255,255,0.8);
     z-index: 0;
 
+  }
+}
+
+@media (max-width: 960px) {
+  .promote-project{
+  
+    &__container{
+      width: 100% !important;
+    }
+
+    .decoration-circle-colored{
+      margin: 0 auto 20px auto !important;
+    }
   }
 }

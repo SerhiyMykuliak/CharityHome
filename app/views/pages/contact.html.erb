@@ -1,6 +1,5 @@
 <%= render 'layouts/hero_section', title: "Contact" %>
 
-
 <div class="contact container">
 
   <p class="contact__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknownto</p>
@@ -11,15 +10,14 @@
     <div class="form">
       <h2 class="contact__title">Contact Form</h2>
       <%= form_with scope: :contact_form, url: contacts_path, method: :post do |f| %>
-        <div>
-          <%=f.text_field :name, placeholder: "Name"%>
-          <%=f.text_field :email, placeholder: "Email"%>
-          <%=f.text_field :phone, placeholder: "Phone"%>
-
-           <%= button_tag "SUBMIT", type:"submit", class:"button_secondary"%>
-        </div>
+      
+        <%=f.text_field :name, placeholder: "Name"%>
+        <%=f.text_field :email, placeholder: "Email"%>
+        <%=f.text_field :phone, placeholder: "Phone"%>
 
         <%=f.text_area :message, placeholder: "Message"%>
+
+         <%= button_tag "SUBMIT", type:"submit", class:"button_secondary"%>
       <% end %>
     </div>
     

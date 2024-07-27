@@ -1,23 +1,24 @@
 <%= render 'layouts/hero_section', title: "ABOUT" %>
 
 <section class="about container">
-  <div class="sec-title sec-title-left">
-    <h2 class="sec-title__heading">More About Us</h2>
-    <div class="decoration-circle-left">
-      <div class="decoration-point"></div>
-    </div>
+  <div class="about__content">
+    <div class="sec-title sec-title-left">
+      <h2 class="sec-title__heading">More About Us</h2>
+      <div class="decoration-circle-left">
+        <div class="decoration-point"></div>
+      </div>
 
-    <div class="about__subtitle">We Provide Worldwide Charity Service Since 1978</div>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem loremIpsum has been the industry's since the 1500s, when an un known printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
+      <div class="about__subtitle">We Provide Worldwide Charity Service Since 1978</div>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem loremIpsum has been the industry's since the 1500s, when an un known printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,</p>
+    </div>
   </div>
-  <div class="about__picture"><%=image_tag "about-1.jpg"%></div>
+
+  <div class="about__picture"><%=image_tag "about-1.jpg", class:"image"%></div>
 </section>
 
 <%= render 'our_missions' %>
 
-<div class="container">
-  <%= render 'call_to_action' %>
-</div>
+<%= render 'call_to_action' %>
 
 <div class="choose-us container">
   <div class="choose-us__content">
@@ -75,14 +76,12 @@
   </div>
 
   <div class="pictures">
-    <%=image_tag "choose-us-1.jpg"%>
+    <%= image_tag "choose-us-1.jpg", class:"image" %>
     <div class="internal-pictures">
-      <%=image_tag "choose-us-2.jpg"%>
-      <%=image_tag "choose-us-3.jpg"%>
+      <%= image_tag "choose-us-2.jpg", class:"image" %>
+      <%= image_tag "choose-us-3.jpg", class:"image" %>
     </div>
-
   </div>
-
 </div>
 
 

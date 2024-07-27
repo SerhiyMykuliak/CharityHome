@@ -10,47 +10,47 @@
 
 .button_primary{
   @extend .button;
-  background-color: white;
+  background-color: $secondary-button-color;
   border: 2px solid #E6E6E6;
   
   &:hover{
-    color: #fff;
-    background-color: #f14b05;
-    border-color: #f14b05;
+    color: $secondary-button-color;
+    background-color: $primary-button-color;
+    border-color: $primary-button-color;
 
   }
 }
 
 .button_inverse{
   @extend .button_primary;
-  color: #f14b05;
+  color: $primary-button-color;
   &:hover{
-    border-color: #fff;
+    border-color: $secondary-button-color;
   }
 }
 
 .button_transparent{
   @extend .button;
   background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid $secondary-button-color;
+  color: $secondary-button-color;
 
   &:hover{
-    color: #f14b05;
-    background-color:#fff;
+    color: $primary-button-color;
+    background-color:$secondary-button-color;
   }
 }
 
 .button_secondary{
   @extend .button;
-  background-color: #f14b05;
-  border: 2px solid #f14b05;
-  color: white;
+  background-color: $primary-button-color;
+  border: 2px solid $primary-button-color;
+  color: $secondary-button-color;
 
   &:hover{
-    color: #f14b05;
-    background-color: #fff;
-    border-color: #f14b05;
+    color: $primary-button-color;
+    background-color: $secondary-button-color;
+    border-color: $primary-button-color;
 
   }
 }
@@ -60,4 +60,28 @@
   gap: 10px;
 }
 
+.change-delete-buttons{
+  display: flex;
+  gap: 10px;
+  margin: 20px 0 20px auto;
+  justify-content: end;
+  .button_delete {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+  }
 
+  .button_edit {
+    background-color: #ffc107;
+    color: #212529;
+    border: none;
+  }
+}
+
+.button_create{
+  background-color: #28a745; 
+  color: #fff; 
+  border: none;
+  margin: 20px 0 20px auto;
+  font-size: 16px;
+}

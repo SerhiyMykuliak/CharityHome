@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    box-sizing: border-box;
   }
 
   &__buttons{
@@ -25,16 +26,16 @@
     border-radius: 30px;
 
     &:hover{
-      color: #eb5310;
-      border-color: #eb5310;
+      color: $primary-button-color;
+      border-color: $primary-button-color;
     }
   }
 
   &__button-primary{
     padding: 15px 35px;
     border-radius: 30px;
-    color: #eb5310;
-    border-color: #eb5310;
+    color: $primary-button-color;
+    border-color: $primary-button-color;
 
     &:hover{
       background-color: transparent;
@@ -95,7 +96,7 @@
     transition: opacity 0s, width 2s;
     white-space: nowrap;
     font-size: 30px;
-    color: #eb5310;
+    color: $primary-color;
     padding: 5px 10px;
     opacity: 0;
     
@@ -119,8 +120,84 @@
       scale: 1;
     }
   }
-
 }
+
+
+@media (max-width: 960px) {
+  .home{  
+    &__container{
+      margin: 0 50px !important;
+    }
+  } 
+}
+
+@media (max-width: 768px) {
+  .home{  
+    &__container{
+      margin: 0 !important;
+      box-sizing: border-box;
+    }
+
+    .animated-title-1{
+      .letter{
+        font-size: 32px;
+      }
+    }
+
+    .animated-title-2{
+      height: 65px;
+      .text{
+        font-size: 37px;
+      }
+    }
+
+    .animated-title-3{
+      font-size: 22px;
+    }
+
+    .subtitle{
+      font-size: 12px;
+    }
+
+    &__button-secondary{
+      font-size: 10px;
+      padding: 10px 15px;
+    }
+  
+    &__button-primary{
+      font-size: 10px;
+      padding: 10px 15px;
+    }
+  
+  } 
+}
+
+@media (max-width: 768px) {
+  .home{  
+    .animated-title-1{
+      .letter{
+        font-size: 28px;
+      }
+    }
+
+    .animated-title-2{
+      height: 50px;
+      .text{
+        font-size: 29px;
+      }
+    }
+
+    .animated-title-3{
+      font-size: 21px;
+    }
+
+    .subtitle{
+      width: 100%;
+    }
+
+  } 
+}
+
 
 
 .event-causes{
@@ -165,6 +242,22 @@
   
 }
 
+@media (max-width: 1200px) {
+  .event-causes{
+    flex-direction: column;
+    align-items: center;
+  
+    &__posts{
+      width: 100%;
+      position: relative;
+    }
+
+    &__featured-cause{
+      width: 100%;
+    }
+  }
+}
+
 .recent-causes{
   padding: 80px 0 50px;
 
@@ -172,7 +265,14 @@
     display: flex;
     gap: 30px;
   }
+}
 
+@media (max-width: 768px) {
+  .recent-causes{
+    &__cards{
+      flex-direction: column;
+    }
+  }
 }
 
 .home_gallery{
@@ -184,9 +284,9 @@
 }
 
 .explore-our-gallery{
-  background-color: #eb5310;
+  background-color: $primary-color;
 
-  &__conrainer{
+  &__container{
     padding: 55px 0;
     display: flex;
     justify-content: space-between;
@@ -206,5 +306,17 @@
     color: #D5E0EE;
     margin: 0;
     line-height: 25px;
+  }
+}
+
+@media (max-width: 960px) {
+  .explore-our-gallery{
+
+    &__container{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 15px;
+    }
   }
 }

@@ -9,7 +9,6 @@
     justify-content: center;
     align-items: center;
     padding: 0 70px;
-    gap: 15px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +37,7 @@
 
   &__icon{
     z-index: 1;
-
+    margin-right: 15px;
     .icon{
       color: white;
       font-size: 50px;
@@ -58,6 +57,39 @@
     p{
       color: white;
       font-weight: 300;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .call-to-action{
+
+    &__box{
+      padding: 0 30px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .call-to-action{
+    flex-direction: column;
+
+    &__box{
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .call-to-action{
+
+    &__content{
+      width: 490px;
+    }
+
+    &__box{
+      padding: 0 15px 0 15px;
+      box-sizing: border-box;
     }
   }
 }

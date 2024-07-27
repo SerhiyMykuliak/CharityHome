@@ -17,7 +17,7 @@
       &__icon{
         min-width: 80px;
         height: 80px;
-        background-color: #eb5310;
+        background-color: $primary-color;
         position: relative;
         display: flex;
         align-items: center;
@@ -49,6 +49,31 @@
 
       &__description{
         margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .our-missions{
+    .missions{
+      .mission{
+        flex: 1 1 calc(50% - 30px);
+        box-sizing: border-box;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .our-missions{
+    .missions{
+      .mission{
+        flex: 1 1 calc(100%);
       }
     }
   }

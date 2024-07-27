@@ -13,6 +13,27 @@ document.addEventListener('turbo:load', () => {
       delay: 5000,
       disableOnInteraction: false, 
     },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+
+      1200: {
+        slidesPerView: 4,
+      },
+    },
  
     effect: 'slide',
     speed: 800,
@@ -38,6 +59,20 @@ document.addEventListener('turbo:load', () => {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+    },
+    
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+
+      1024: {
+        slidesPerView: 2,
+      },
+
+      1200: {
+        slidesPerView: 3,
+      },
     },
  
     effect: 'slide',

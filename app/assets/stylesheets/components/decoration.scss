@@ -1,13 +1,14 @@
 .decoration-circle{
   width: 12px;
   height: 12px;
-  border: 2px solid #eb5310;
+  border: 2px solid $primary-color;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   margin-top: 20px;
+  text-align: center;
 
   &::before{
     content: " ";
@@ -29,7 +30,7 @@
     width: 6px;
     height: 6px;
     border-radius: 100%;
-    background-color: #eb5310;
+    background-color: $primary-color;
   }
 }
 
@@ -47,38 +48,36 @@
 .decoration-circle-colored{
   @extend .decoration-circle;
 
-  border: 2px solid #eb5310;
+  border: 2px solid $primary-color;
   
   &::before{
-    border-bottom: 2px solid #eb5310;
+    border-bottom: 2px solid $primary-color;
   }
 
   &::after{
-    border-bottom: 2px solid #eb5310;
+    border-bottom: 2px solid $primary-color;
   }
 
   .decoration-point{
-    background-color: #eb5310;
+    background-color: $primary-color;
   }
 }
 
 .decoration-circle-left{
   @extend .decoration-circle;
   
-  margin-top: 0;
+  margin: 0 !important;
   
   &::before{
     left: 50px;
   }
 }
 
-
-
 .decoration-double-line{
   width: 50px;
   height: 2px;
-  border-bottom: 2px solid #eb5310;
-  border-top: 2px solid #eb5310;
+  border-bottom: 2px solid $primary-color;
+  border-top: 2px solid $primary-color;
 }
 
 

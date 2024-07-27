@@ -15,8 +15,18 @@
     flex-wrap: wrap;
     gap: 30px;
   }
-
 }
 
+@media (max-width: 768px) {
+  .blog{
 
+    &__container{
+      flex-direction: column;
+    }
 
+    &__content{
+      width: 100%;
+    }
+
+  }
+}

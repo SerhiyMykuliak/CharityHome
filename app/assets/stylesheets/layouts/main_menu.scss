@@ -1,22 +1,21 @@
 
 .main-menu{
-  background-color: #262F36;
-  border-bottom: 3px solid #f14b05;
+  background-color: $secondary-color;
+  border-bottom: 3px solid $primary-color;
   position: sticky;
   z-index: 100;
   top: 0;
 
-  .container{
-    max-width: 1180px;
-    margin: 0 auto;
+  &__container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     
-
     ul{
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       li{
         list-style-type: none;
         color: white;
@@ -33,10 +32,6 @@
       }
     }
 
-    .search-icon{
-      color: white;
-      font-size: 20px;
-    }
   }
 }
 

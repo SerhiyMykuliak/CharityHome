@@ -1,0 +1,42 @@
+.flash-message{
+  position: fixed;
+  top: 240px;
+  right: 200px;
+  background-color: white;
+  padding: 15px;
+  border: 2px solid $primary-color;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.flash-message.hidden{
+  opacity: 0;
+}
+
+.error-form-message{
+  color: #e74c3c;
+  font-size: 14px; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: fit-content;
+  padding: 4px; 
+  border-radius: 4px;
+  border: 1px solid #e74c3c; 
+  background-color: #fce4e4; 
+  display: inline-block;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 4px; 
+  border-radius: 4px;
+  border: 1px solid #e74c3c; 
+  background-color: #fce4e4; 
+  display: inline-block;
+}
+

@@ -9,7 +9,7 @@
   gap: 20px;
   position: absolute;
   left: auto;   
-  top: -140px;
+  top: -100px;
   right: 0;
 
   .swiper-button-prev, 
@@ -17,7 +17,7 @@
     position: static;
     width: 45px;
     height: 45px;
-    background-color: #eb5310;
+    background-color: $primary-color;
   
     &::after{
       font-family: 'Font Awesome 5 Free';
@@ -40,14 +40,14 @@
   position: static;
 
   &-bullet{
-    border: 2px solid #eb5310;
+    border: 2px solid $primary-color;
     background-color: white;
     opacity: 1;
     width: 5px;
     height: 5px;
   }
   .swiper-pagination-bullet-active{
-    background-color: #eb5310;
+    background-color: $primary-color;
   }
 
 }

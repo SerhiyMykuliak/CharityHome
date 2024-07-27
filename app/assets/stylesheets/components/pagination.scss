@@ -10,8 +10,8 @@
     padding: 7px 15px;
     text-align: center;
     display: inline-block;
-    border: 1px solid #eb5310;
-    background-color: #eb5310;
+    border: 1px solid $primary-color;
+    background-color: $primary-color;
   }
 
   a{
@@ -21,6 +21,6 @@
     padding: 7px 15px;
     text-align: center;
     display: inline-block;
-    border: 1px solid #eb5310
+    border: 1px solid $primary-color;
   }
 }

@@ -5,7 +5,7 @@
   .cause{
     display: flex;
     flex-direction: column;
-    flex: 2;
+    width: 66.66666%;
 
     &__details{
       display: flex;
@@ -35,4 +35,17 @@
   }
 }
 
+@media (max-width: 768px) {
+  .cause-container{
+    flex-direction: column;
+  
+    .cause{
+      width: 100%;
+      
+      &__details{
+        flex-direction: column;
+      }
+    }
+  }  
+}
 

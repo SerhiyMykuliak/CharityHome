@@ -1,5 +1,3 @@
-
-
 .gallery {
   display: flex;
   justify-content: space-around;
@@ -13,6 +11,22 @@
     img {
       width: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .gallery{
+    &__image{
+      width: calc(50% - 4px);
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .gallery{
+    &__image{
+      width: calc(100% - 4px);
     }
   }
 }

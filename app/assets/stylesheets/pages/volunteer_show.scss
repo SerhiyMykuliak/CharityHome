@@ -1,8 +1,7 @@
 .volunteer-profile{
 
   &__content{
-    width: 1180px;
-    margin: 90px auto;
+    padding: 90px 0;
     display: flex;
     gap: 30px;
   }
@@ -30,7 +29,7 @@
   }
 
   &__job{
-    color: #eb5310;
+    color: $primary-color;
     padding-bottom: 15px;
     margin-bottom: 15px;
     border-bottom: 1px solid #E6E6E6;
@@ -45,7 +44,7 @@
 
   &__time-together{
     font-size: 16px;
-    color: #eb5310;
+    color: $primary-color;
     margin: 20px 0;
   }
 
@@ -55,11 +54,23 @@
 
   .contacts{
     a{
-      background-color: #eb5310;
+      background-color: $primary-color;
       color: white;
     }
   }
+}
 
+@media (max-width: 768px) {
+  .volunteer-profile{
+    &__picture{
+      
+      width: 300px;
+    }  
+
+    &__content{
+      flex-direction: column;
+    }
+  }
 }
 
 

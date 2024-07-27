@@ -1,10 +1,7 @@
 .footer{
-
-  background-color: #262F36;
+  background-color: $secondary-color;
   
   &__container{
-    width: 1180px;
-    margin: 0 auto 0 auto;
     display: flex;
     padding: 90px 0;
     gap: 30px;
@@ -38,7 +35,7 @@
   }
 
   &__post-date{
-    color: #eb5310;
+    color: $primary-color;
     font-size: 13px;
     margin-top: 10px;
   }
@@ -49,7 +46,7 @@
     gap: 20px;
     width: 25%;
   }
-  
+
   &__contacts{
 
     .fa{
@@ -102,6 +99,64 @@
       .button_secondary{
         border-radius: 0;
       }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer{
+    &__container{
+      gap: 5px;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .footer{
+    &__container{
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    &__about{
+      width: calc(50% - 15px);
+    }
+
+    &__news{
+      width: calc(50% - 15px);
+    }
+  
+    &__pages{
+      width: calc(50% - 15px);
+    }
+  
+    &__contact-us{
+      width: calc(50% - 15px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer{
+    &__container{
+      width: 400px !important;
+      gap: 40px !important;
+    }
+
+    &__about{
+      width: 100%;
+    }
+
+    &__news{
+      width: 100%;
+    }
+  
+    &__pages{
+      width: 100%;
+    }
+  
+    &__contact-us{
+      width: 100%;
     }
   }
 }

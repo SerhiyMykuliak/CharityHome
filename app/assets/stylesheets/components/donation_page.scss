@@ -6,8 +6,7 @@
   &__form{
     width: 50%;
 
-    form{
-      
+    form{  
       .button_secondary{
         width: fit-content;
       }
@@ -17,7 +16,19 @@
   &__cause{
     width: 50%;
   }
+}
 
+@media (max-width: 960px) {
+  .donation{
+    flex-direction: column;
+    &__form{
+      width: 100%;
+    }
+  
+    &__cause{
+      width: 100%;
+    }
+  }
 }
 
 #card-element {

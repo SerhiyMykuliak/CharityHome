@@ -35,7 +35,7 @@
   }
 
   .progress-value {
-    background-color: #eb5310;
+    background-color: $primary-color;
     border-radius: 20px;
     height: 15px;
   }
@@ -45,7 +45,7 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background-color: #eb5310;
+    background-color: $primary-color;
     margin-top: -27px;
     display: flex;
     align-items: center;
@@ -64,13 +64,18 @@
   }
 
   &__donates{
-    color: #eb5310;
+    color: $primary-color;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 16px;
   }
 }
 
-
+@media (max-width: 768px) {
+  .cause-lg{
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+  }
+}
 
 

@@ -1,12 +1,10 @@
-
 <%= render 'layouts/hero_section', title: "VOLUNTEER" %>
 
+<div class="container">
+  <%= render 'shared/create_button', model: Volunteer %>
+</div>
 
-<div class="volunteers">
-  <div class="container">
-    <%= render 'shared/create_button', model: Volunteer %>
-  </div>
-
+<div class="volunteers container">
   <%@volunteers.each do |volunteer|%>
     <%= render 'volunteer_card', volunteer: volunteer %>
   <%end%>

@@ -1,23 +1,25 @@
 <div class="volunteer hover-box">
   <div class="volunteer__profile-image-wrap">
-    <div class="contacts apear-box">
-      <% if volunteer.facebook_url.present? %>
-        <%= link_to volunteer.facebook_url do %>
-          <i class="fa-brands fa-facebook-f"></i>
+    <div class="profile_image">
+      <div class="contacts apear-box">
+        <% if volunteer.facebook_url.present? %>
+          <%= link_to volunteer.facebook_url do %>
+            <i class="fa-brands fa-facebook-f"></i>
+          <% end %>
         <% end %>
-      <% end %>
-      <% if volunteer.twitter_url.present? %>
-        <%= link_to volunteer.twitter_url do %>
-          <i class="fa-brands fa-twitter"></i>
+        <% if volunteer.twitter_url.present? %>
+          <%= link_to volunteer.twitter_url do %>
+            <i class="fa-brands fa-twitter"></i>
+          <% end %>
         <% end %>
-      <% end %>
-      <% if volunteer.linkedin_url.present? %>
-        <%= link_to volunteer.linkedin_url do %>
-          <i class="fa-brands fa-linkedin-in"></i>
+        <% if volunteer.linkedin_url.present? %>
+          <%= link_to volunteer.linkedin_url do %>
+            <i class="fa-brands fa-linkedin-in"></i>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
+      <%=image_tag volunteer.profile_picture, class: "image"%>
     </div>
-    <%=image_tag volunteer.profile_picture, class: "profile_image"%>
   </div>
   <h3 class="volunteer__fullname"><%=volunteer.name%></h3>
   <p class="volunteer__job"><%=volunteer.job%></p>

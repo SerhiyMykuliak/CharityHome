@@ -14,15 +14,9 @@
     <% end %>
   </div>
 
-
-  <h3 class="right-bar__title">Archive</h3>
   <h3 class="right-bar__title">Tag Cloud</h3>
-  
-  
+
   <% @tags.each do |tag| %>
     <%=button_to tag.name, tag_path(tag.name), method: :get, class: "button_primary right-bar__button_primary"%>
   <% end %>
-  
-
-
 </div>

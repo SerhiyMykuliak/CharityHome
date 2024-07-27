@@ -1,5 +1,5 @@
 .fact-counter{
-  background-color: #eb5310 ;
+  background-color: $primary-color ;
   display: flex;
   color: white;
 
@@ -11,7 +11,7 @@
     flex: 1;
 
     .button_primary{
-      color: #eb5310;
+      color: $primary-button-color;
     }
   }
 
@@ -24,6 +24,7 @@
 
   &__facts{
     display: flex;
+    flex-wrap: wrap;
     flex: 1;
     justify-content: center;
     gap: 70px;
@@ -66,5 +67,39 @@
 
   &__content{ 
     display: flex;    
+  }
+}
+
+@media (max-width: 1200px) {
+  .fact-counter{
+
+    &__content{
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    &__title{
+      width: 600px;
+    }
+
+    .button_to{
+      display: inline-block;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .fact-counter{
+    &__container{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &__title{
+      width: 100%;
+    }
   }
 }
